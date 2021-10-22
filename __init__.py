@@ -5,7 +5,6 @@ import requests as req
 from collections import deque
 from dataclasses import dataclass, asdict
 from time import sleep
-from evdev import InputDevice, list_devices, ecodes, categorize
 
 CODE_MAP_CHAR = {
     'KEY_PAGEDOWN': 'Page Down',
@@ -29,22 +28,28 @@ PLAYLIST = (
 # Data class for light settings
 @dataclass
 class LEDPreset:
-    palette: int = 200
+    palette: int = 0
     primary_pattern: int = 0
     primary_scale: float = 1
     primary_speed: float = 0.05
     secondary_pattern: int = 0
-    secondary_scale: float = 1
+    secondary_scale: float = 0
     secondary_speed: float = 0.05
-    # brightness: float = 1.0
-    # color_temp: int = 6000
-    # gamma: float = 1.0
-    # saturation: float = 1.0
+    brightness: float = 1.0
+    color_temp: int = 6000
+    gamma: float = 1.0
+    saturation: float = 1.0
 
-    def apply(self):
-        for k, v in asdict(self).items():
-            send_request(k, v)
+class LEDs:
+    currentSettings = {}
 
+    def apply(self, new_preset: LEDPreset):
+        for k, v in asdict(new_preset).items():
+            if k not in self.currentSettings or self.currentSettings[k] is not v:
+                send_request(k, v)
+                self.currentSettings[k] = v
+
+StageLights = LEDs()
 
 # Pattern library
 patterns = {
@@ -79,38 +84,32 @@ def send_request(key, value):
     return req.get('http://localhost/setparam?key={}&value={}'.format(key, value))
 
 def start():
-    send_request("primary_pattern", patterns["Blackout"])
-    send_request("primary_speed", "1")
-    send_request("palette", palettes["Sunset Light"])
+    blackout = LEDPreset(primary_pattern = patterns['Blackout'])
+    color = LEDPreset(palettes['Sunset Light'], patterns['Static Color'])
+    StageLights.apply(new_preset = blackout)
     sleep(1)
-    send_request("primary_pattern", patterns["Static Color"])
+    StageLights.apply(new_preset = color)
     sleep(1)
-    send_request("primary_pattern", patterns["Blackout"])
+    StageLights.apply(new_preset = blackout)
     sleep(1)
-    send_request("primary_pattern", patterns["Static Color"])
+    StageLights.apply(new_preset = color)
     sleep(1)
-    send_request("primary_pattern", patterns["Blackout"])
+    StageLights.apply(new_preset = blackout)
     sleep(1)
-    send_request("primary_pattern", patterns["Static Color"])
+    StageLights.apply(new_preset = color)
     sleep(1)
-    send_request("primary_pattern", patterns["Blackout"])
+    StageLights.apply(new_preset = blackout)
     return
 
 def heia():
-    preset = LEDPreset(palettes["Sky Blue"], patterns["Fade in"])
-    preset.apply()
-    # send_request("palette", palettes["Sky Blue"])
-    # send_request("primary_pattern", patterns["Fade in"])
+    base = LEDPreset(palettes["Sky Blue"], patterns["Fade in"])
+    StageLights.apply(new_preset = base)
     sleep(3)
-    preset.primary_pattern = patterns["Palette Plasma 2D"]
-    preset.apply()
-    # send_request("primary_pattern", patterns["Palette Plasma 2D"])
+    base.primary_pattern = patterns["Palette Plasma 2D"]
+    StageLights.apply(new_preset = base)
 
 def fireAriaStart():
-    send_request("palette", palettes["Fire"])
-    send_request("primary_pattern", patterns["Palette Twinkle 1D"])
-    send_request("primary_speed", "1")
-    return
+    StageLights.apply(new_preset = LEDPreset(palettes["Fire"], patterns["Palette Twinkle 1D"]))
 
 def fireAriaWings():
     send_request("primary_pattern", patterns["Blackbody pulse from center"])
