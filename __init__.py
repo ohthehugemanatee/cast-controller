@@ -51,8 +51,7 @@ class LEDs:
     def apply(self, new_preset: LEDPreset):
         requests_to_send = {}
         for k, v in asdict(new_preset).items():
-            if k not in self.currentSettings or self.currentSettings[k] is not v:
-                requests_to_send[k] = v
+            requests_to_send[k] = v
         asyncio.run(self.send_requests(requests_to_send))
 
     async def send_request(self, session, k, v):
