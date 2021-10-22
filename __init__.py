@@ -86,30 +86,30 @@ def send_request(key, value):
 def start():
     blackout = LEDPreset(primary_pattern = patterns['Blackout'])
     color = LEDPreset(palettes['Sunset Light'], patterns['Static Color'])
-    StageLights.apply(new_preset = blackout)
+    StageLights.apply(blackout)
     sleep(1)
-    StageLights.apply(new_preset = color)
+    StageLights.apply(color)
     sleep(1)
-    StageLights.apply(new_preset = blackout)
+    StageLights.apply(blackout)
     sleep(1)
-    StageLights.apply(new_preset = color)
+    StageLights.apply(color)
     sleep(1)
-    StageLights.apply(new_preset = blackout)
+    StageLights.apply(blackout)
     sleep(1)
-    StageLights.apply(new_preset = color)
+    StageLights.apply(color)
     sleep(1)
-    StageLights.apply(new_preset = blackout)
+    StageLights.apply(blackout)
     return
 
 def heia():
     base = LEDPreset(palettes["Sky Blue"], patterns["Fade in"])
-    StageLights.apply(new_preset = base)
+    StageLights.apply(base)
     sleep(3)
     base.primary_pattern = patterns["Palette Plasma 2D"]
-    StageLights.apply(new_preset = base)
+    StageLights.apply(base)
 
 def fireAriaStart():
-    StageLights.apply(new_preset = LEDPreset(palettes["Fire"], patterns["Palette Twinkle 1D"]))
+    StageLights.apply(LEDPreset(palettes["Fire"], patterns["Palette Twinkle 1D"]))
 
 def fireAriaWings():
     send_request("primary_pattern", patterns["Blackbody pulse from center"])
