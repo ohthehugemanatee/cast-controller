@@ -5,6 +5,7 @@ import requests as req
 from collections import deque
 from dataclasses import dataclass, asdict
 from time import sleep
+from evdev import InputDevice, list_devices, ecodes, categorize
 
 CODE_MAP_CHAR = {
     'KEY_PAGEDOWN': 'Page Down',
