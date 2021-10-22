@@ -3,6 +3,7 @@
 import sys
 import requests as req
 from collections import deque
+from dataclasses import dataclass, asdict
 from time import sleep
 from evdev import InputDevice, list_devices, ecodes, categorize
 
@@ -24,6 +25,26 @@ PLAYLIST = (
     'anotherSong',
     'end',
     )
+
+# Data class for light settings
+@dataclass
+class LEDPreset:
+    palette: int = 200
+    primary_pattern: int = 0
+    primary_scale: float = 1
+    primary_speed: float = 0.05
+    secondary_pattern: int = 0
+    secondary_scale: float = 1
+    secondary_speed: float = 0.05
+    # brightness: float = 1.0
+    # color_temp: int = 6000
+    # gamma: float = 1.0
+    # saturation: float = 1.0
+
+    def apply(self):
+        for k, v in asdict(self):
+            send_request(k, v)
+
 
 # Pattern library
 patterns = {
@@ -76,10 +97,14 @@ def start():
     return
 
 def heia():
-    send_request("palette", palettes["Sky Blue"])
-    send_request("primary_pattern", patterns["Fade in"])
+    preset = LEDPreset(palettes["Sky Blue"], patterns["Fade in"])
+    preset.apply()
+    # send_request("palette", palettes["Sky Blue"])
+    # send_request("primary_pattern", patterns["Fade in"])
     sleep(3)
-    send_request("primary_pattern", patterns["Palette Plasma 2D"])
+    preset.primary_pattern = patterns["Palette Plasma 2D"]
+    preset.apply()
+    # send_request("primary_pattern", patterns["Palette Plasma 2D"])
 
 def fireAriaStart():
     send_request("palette", palettes["Fire"])
