@@ -106,11 +106,6 @@ palettes = {
 def parse_key_to_char(val):
     return CODE_MAP_CHAR[val] if val in CODE_MAP_CHAR else val + " not found"
 
-
-def send_request(key, value):
-    return req.get('http://localhost/setparam?key={}&value={}'.format(key, value))
-
-
 def start():
     blackout = LEDPreset(primary_pattern=patterns['Blackout'])
     color = LEDPreset(palettes['Sunset Light'], patterns['Static Color'])
