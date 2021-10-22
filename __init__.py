@@ -112,26 +112,25 @@ def fireAriaStart():
     StageLights.apply(LEDPreset(palettes["Fire"], patterns["Palette Twinkle 1D"]))
 
 def fireAriaWings():
-    send_request("primary_pattern", patterns["Blackbody pulse from center"])
-    return
+    StageLights.apply(LEDPreset(primary_pattern = patterns["Blackbody pulse from center"]))
 
 def fireAriaEnd():
-    send_request("primary_pattern", patterns["Palette Plasma 2D"])
-    send_request("primary_speed", "0")
+    StageLights.apply(LEDPreset(primary_pattern = patterns["Palette Plasma 2D"], primary_speed = 0))
     sleep(4)
-    send_request("primary_pattern", patterns["Fade out"])
-    send_request("primary_speed", "0.2")
+    StageLights.apply(LEDPreset(primary_pattern = patterns["Fade out"], primary_speed=0.2))
     return
 
 def anotherSong():
-    send_request("palette", palettes["Ocean"])
-    send_request("primary_pattern", patterns["Wipe in"])
-    send_request("primary_speed", "0.18")
-    return
+    StageLights.apply(LEDPreset(
+        primary_pattern = patterns["Wipe in"],
+        primary_speed=0.18,
+        palette=palettes["Ocean"]
+        ))
 
 def end():
-    send_request("primary_pattern", patterns["Fade out"])
-    return
+    StageLights.apply(LEDPreset(
+        primary_pattern = patterns["Fade out"]
+        ))
 
 if __name__ == "__main__":
     device = InputDevice('/dev/input/event0')
