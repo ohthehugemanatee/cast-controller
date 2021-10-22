@@ -24,9 +24,11 @@ PLAYLIST = (
     'fireAriaEnd',
     'anotherSong',
     'end',
-    )
+)
 
 # Data class for light settings
+
+
 @dataclass
 class LEDPreset:
     palette: int = 0
@@ -41,6 +43,7 @@ class LEDPreset:
     gamma: float = 1.0
     saturation: float = 1.0
 
+
 class LEDs:
     currentSettings = {}
 
@@ -50,42 +53,45 @@ class LEDs:
                 send_request(k, v)
                 self.currentSettings[k] = v
 
+
 StageLights = LEDs()
 
 # Pattern library
 patterns = {
-        "Static Color": 0,
-        "Static Gradient 1D": 1,
-        "Palette Waves 1D": 150,
-        "Palette Plasma 2D": 170,
-        "Palette Twinkle 1D": 190,
-        "Fade in": 1633213622116,
-        "Fade out": 1633036792965,
-        "Wipe in": 1633213463693,
-        "Blackout": 1633910057112,
-        "Blackbody pulse from center": 1634079287296,
-        "Wipe out from center": 1634080813116
-        }
+    "Static Color": 0,
+    "Static Gradient 1D": 1,
+    "Palette Waves 1D": 150,
+    "Palette Plasma 2D": 170,
+    "Palette Twinkle 1D": 190,
+    "Fade in": 1633213622116,
+    "Fade out": 1633036792965,
+    "Wipe in": 1633213463693,
+    "Blackout": 1633910057112,
+    "Blackbody pulse from center": 1634079287296,
+    "Wipe out from center": 1634080813116
+}
 
 palettes = {
-        "Sunset Light": 0,
-        "Fire": 150,
-        "Golden Hour": 160,
-        "Ocean": 170,
-        "Sky Blue": 190,
-        "Purple": 200,
-        "Hot Pink": 210
-        }
+    "Sunset Light": 0,
+    "Fire": 150,
+    "Golden Hour": 160,
+    "Ocean": 170,
+    "Sky Blue": 190,
+    "Purple": 200,
+    "Hot Pink": 210
+}
 
 
 def parse_key_to_char(val):
     return CODE_MAP_CHAR[val] if val in CODE_MAP_CHAR else val + " not found"
 
+
 def send_request(key, value):
     return req.get('http://localhost/setparam?key={}&value={}'.format(key, value))
 
+
 def start():
-    blackout = LEDPreset(primary_pattern = patterns['Blackout'])
+    blackout = LEDPreset(primary_pattern=patterns['Blackout'])
     color = LEDPreset(palettes['Sunset Light'], patterns['Static Color'])
     StageLights.apply(blackout)
     sleep(1)
@@ -102,6 +108,7 @@ def start():
     StageLights.apply(blackout)
     return
 
+
 def heia():
     base = LEDPreset(palettes["Sky Blue"], patterns["Fade in"])
     StageLights.apply(base)
@@ -109,37 +116,47 @@ def heia():
     base.primary_pattern = patterns["Palette Plasma 2D"]
     StageLights.apply(base)
 
+
 def fireAriaStart():
-    StageLights.apply(LEDPreset(palettes["Fire"], patterns["Palette Twinkle 1D"]))
+    StageLights.apply(
+        LEDPreset(palettes["Fire"], patterns["Palette Twinkle 1D"]))
+
 
 def fireAriaWings():
-    StageLights.apply(LEDPreset(primary_pattern = patterns["Blackbody pulse from center"]))
+    StageLights.apply(
+        LEDPreset(primary_pattern=patterns["Blackbody pulse from center"]))
+
 
 def fireAriaEnd():
-    StageLights.apply(LEDPreset(primary_pattern = patterns["Palette Plasma 2D"], primary_speed = 0))
+    StageLights.apply(
+        LEDPreset(primary_pattern=patterns["Palette Plasma 2D"], primary_speed=0))
     sleep(4)
-    StageLights.apply(LEDPreset(primary_pattern = patterns["Fade out"], primary_speed=0.2))
+    StageLights.apply(
+        LEDPreset(primary_pattern=patterns["Fade out"], primary_speed=0.2))
     return
+
 
 def anotherSong():
     StageLights.apply(LEDPreset(
-        primary_pattern = patterns["Wipe in"],
+        primary_pattern=patterns["Wipe in"],
         primary_speed=0.18,
         palette=palettes["Ocean"]
-        ))
+    ))
+
 
 def end():
     StageLights.apply(LEDPreset(
-        primary_pattern = patterns["Fade out"]
-        ))
+        primary_pattern=patterns["Fade out"]
+    ))
+
 
 if __name__ == "__main__":
     device = InputDevice('/dev/input/event0')
-        
+
     print("Listening to controller: {}".format(device.name))
-    
+
     player = deque(PLAYLIST)
-    current = player[0] 
+    current = player[0]
     print("Executing {}".format(current))
     eval(player[0])()
     for event in device.read_loop():
@@ -155,6 +172,3 @@ if __name__ == "__main__":
                 print("Executing {}".format(player[0]))
                 eval(player[0])()
                 sys.stdout.flush()
-
-
-
