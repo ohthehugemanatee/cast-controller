@@ -42,7 +42,7 @@ class LEDPreset:
     # saturation: float = 1.0
 
     def apply(self):
-        for k, v in asdict(self):
+        for k, v in asdict(self).items():
             send_request(k, v)
 
 
