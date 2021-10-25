@@ -23,8 +23,6 @@ StageLights = LEDs()
 def run_playlist(input_device):
     device = InputDevice(input_device)
 
-    print("Listening to controller: {}".format(device.name))
-
     player = deque(PLAYLIST)
     current = player[0]
     print("Executing {}".format(current))
