@@ -7,16 +7,6 @@ from castcontroller.ledcontrol import LEDs, LEDPreset
 from castcontroller.pattern_library import palettes, patterns
 
 
-PLAYLIST = (
-    'start',
-    'heia',
-    'fireAriaStart',
-    'fireAriaWings',
-    'fireAriaEnd',
-    'anotherSong',
-    'end',
-)
-
 StageLights = LEDs()
 
 
@@ -26,7 +16,7 @@ def run_playlist(input_device):
     player = deque(PLAYLIST)
     current = player[0]
     print("Executing {}".format(current))
-    eval(player[0])()
+    player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
             e = categorize(event)
@@ -38,7 +28,7 @@ def run_playlist(input_device):
                     # Previous
                     player.rotate(1)
                 print("Executing {}".format(player[0]))
-                eval(player[0])()
+                player[0]()
                 sys.stdout.flush()
 
 
@@ -46,22 +36,22 @@ def start():
     blackout = LEDPreset(primary_pattern=patterns['Blackout'])
     color = LEDPreset(palettes['Sunset Light'], patterns['Static Color'])
     StageLights.apply(blackout)
-    sleep(1)
+    sleep(2)
     StageLights.apply(color)
-    sleep(1)
+    sleep(2)
     StageLights.apply(blackout)
-    sleep(1)
+    sleep(2)
     StageLights.apply(color)
-    sleep(1)
+    sleep(2)
     StageLights.apply(blackout)
-    sleep(1)
+    sleep(2)
     StageLights.apply(color)
-    sleep(1)
+    sleep(2)
     StageLights.apply(blackout)
     return
 
 
-def heia():
+def overture():
     base = LEDPreset(palettes["Sky Blue"], patterns["Fade in"])
     StageLights.apply(base)
     sleep(3)
@@ -101,3 +91,13 @@ def end():
     StageLights.apply(LEDPreset(
         primary_pattern=patterns["Fade out"]
     ))
+
+
+PLAYLIST = (
+    start,
+    fireAriaStart,
+    fireAriaWings,
+    fireAriaEnd,
+    anotherSong,
+    end,
+)
