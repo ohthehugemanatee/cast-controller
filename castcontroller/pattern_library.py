@@ -2,8 +2,10 @@
 patterns = {
     "Static Color": 0,
     "Static Gradient 1D": 1,
+    "Palette Scan Mirrored 1D": 140,
     "Palette Waves 1D": 150,
     "Palette Plasma 2D": 170,
+    "Palette Fractal Plasma 2D": 180,
     "Palette Twinkle 1D": 190,
     "Fade in": 1633213622116,
     "Fade out": 1633036792965,
@@ -15,6 +17,7 @@ patterns = {
 
 palettes = {
     "Sunset Light": 0,
+    "Miami": 20,
     "Fire": 150,
     "Golden Hour": 160,
     "Ocean": 170,
