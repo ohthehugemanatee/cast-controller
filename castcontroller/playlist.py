@@ -18,7 +18,7 @@ def run_playlist(input_device):
     device = InputDevice(input_device)
 
     player = deque(PLAYLIST)
-    print("Executing {}".format(player[0].func_name))
+    print("Executing {}".format(player[0].__name__))
     player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
@@ -30,7 +30,7 @@ def run_playlist(input_device):
                 elif e.keycode == 'KEY_PAGEUP':
                     # Previous
                     player.rotate(1)
-                print("Executing {}".format(player[0].func_name))
+                print("Executing {}".format(player[0].__name__))
                 player[0]()
                 sys.stdout.flush()
 
