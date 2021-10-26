@@ -350,16 +350,48 @@ def una_furtiva():
 def when_i_am_laid():
     apply_from_json("""
     {
-        "brightness": 0.85,
+        "brightness": 1,
         "color_temp": 12000,
         "palette": 1634907211469,
-        "primary_pattern": 1,
-        "primary_scale": 0.0,
-        "primary_speed": 0.99,
+        "primary_pattern": 1635286756259,
+        "primary_scale": 1.0,
+        "primary_speed": 0.27,
         "saturation": 1.0,
-        "secondary_pattern": 7,
-        "secondary_scale": 0.91,
+        "secondary_pattern": 0,
+        "secondary_scale": 2.0,
         "secondary_speed": 0.59
+        }""")
+
+
+def es_ist_einmal():
+    apply_from_json("""
+    {
+        "brightness": 1.0,
+        "color_temp": 12000,
+        "palette": 1635287289272,
+        "primary_pattern": 120,
+        "primary_scale": 1.0,
+        "primary_speed": 0.28,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": 2.0,
+        "secondary_speed": 0.59
+        }""")
+
+
+def dimgh():
+    apply_from_json("""
+     {
+        "brightness": 0.55,
+        "color_temp": 8000,
+        "palette": 1634910211574,
+        "primary_pattern": 180,
+        "primary_scale": 0.0,
+        "primary_speed": 0.22,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -5.4,
+        "secondary_speed": 0.08
     }""")
 
 
@@ -395,7 +427,10 @@ PLAYLIST = (
     non_giunge,  # Ah non giunge
     moderation,  # Text Guillermo
     una_furtiva,  # Una furtiva lagrima
-    when_i_am_laid  # When I am laid
+    when_i_am_laid,  # When I am laid
+    es_ist_einmal,  # Es ist einmal im Leben so
+    moderation,  # Interview anne and yu
+    dimgh,  # Dein ist mein ganzes Herz
 
 
 
