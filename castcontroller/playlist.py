@@ -61,6 +61,7 @@ def overture():
 
 
 def willkommen():
+    # This should be glittery. What's up with that?
     params = """
         {
         "brightness": 1.0,
@@ -91,6 +92,7 @@ def zitti_zitti():
 
 
 def norma():
+    # coming from a blackout there's an instant of the wrong color.
     StageLights.apply(LEDPreset(
         palettes["Purple"],
         patterns["Palette Fractal Plasma 2D"],
@@ -106,8 +108,7 @@ def ganz_ohne_weiber():
     )
     StageLights.apply(base)
     sleep(50)  # Or could be a cue?
-    i = 0
-    for i in range(i, 30):
+    for i in range(0, 30):
         new_base = base
         if base.brightness < 1:
 
