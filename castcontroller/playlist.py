@@ -77,7 +77,7 @@ def willkommen():
         "secondary_speed": 0.3
     }
     """
-    params = json.load(params)
+    params = json.loads(params)
     StageLights.apply(LEDPreset(params))
 
 
@@ -147,7 +147,7 @@ def a_beber():
         "secondary_speed": 0.08
     }
     """
-    params = json.load(params)
+    params = json.loads(params)
     StageLights.apply(LEDPreset(params))
 
 
@@ -182,7 +182,7 @@ def belle_nuit():
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
     },"""
-    params = json.load(params)
+    params = json.loads(params)
     StageLights.apply(LEDPreset(params))
 
 
