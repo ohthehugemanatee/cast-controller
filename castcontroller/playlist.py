@@ -61,7 +61,6 @@ def overture():
 
 
 def willkommen():
-    # This should be glittery. What's up with that?
     params = """
         {
         "brightness": 1.0,
@@ -83,24 +82,61 @@ def willkommen():
 def moderation():
     StageLights.apply(
         LEDPreset(palettes["Sunset Light"],
-                  patterns["Palette Plasma 2D"]))
+                  patterns["Palette Plasma 2D"],
+                  brightness=0.55))
 
 
 def zitti_zitti():
-    # @todo: new color palette for this.
-    StageLights.apply(blackout)
+    params = """
+     {
+        "brightness": 1,
+        "color_temp": 6000,
+        "palette": 1635281872064,
+        "primary_pattern": 180,
+        "primary_scale": 1.0,
+        "primary_speed": 0.2,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": 0.0,
+        "secondary_speed": 0.33
+    }"""
+    params = json.loads(params)
+    StageLights.apply(LEDPreset(**params))
 
 
 def norma():
-    # coming from a blackout there's an instant of the wrong color.
-    StageLights.apply(LEDPreset(
-        palettes["Purple"],
-        patterns["Palette Fractal Plasma 2D"],
-        primary_speed=0.2
-    ))
+    params = """
+    {
+        "brightness": 0.6,
+        "color_temp": 6000,
+        "palette": 1635282276093,
+        "primary_pattern": 141,
+        "primary_scale": 1.0,
+        "primary_speed": 0.25,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": 0.0,
+        "secondary_speed": 0.33
+    }"""
+
+    params = json.loads(params)
+    base = LEDPreset(**params)
+    StageLights.apply(base)
+    sleep(120)
+    for i in range(0, 45):
+        new_base = base
+        if base.brightness < 1:
+            new_base.brightness = base.brightness + 0.02
+        if base.primary_speed < 1.2:
+            new_base.primary_speed = base.primary_speed + 0.02
+        if new_base != base:
+            base = new_base
+            StageLights.apply(base)
+        sleep(1)
 
 
 def ganz_ohne_weiber():
+    # The loop is still not working. :(
     base = LEDPreset(
         palettes["Miami"],
         patterns["Palette Plasma 2D"],
@@ -111,11 +147,10 @@ def ganz_ohne_weiber():
     for i in range(0, 30):
         new_base = base
         if base.brightness < 1:
-
-            new_base.brightness = base.brightness + 0.5
+            new_base.brightness = base.brightness + 0.05
         if base.primary_speed < 1:
-            new_base.primary_speed = base.primary_speed + 0.5
-        if new_base is not base:
+            new_base.primary_speed = base.primary_speed + 0.05
+        if new_base != base:
             base = new_base
             StageLights.apply(base)
         sleep(1)
@@ -150,6 +185,7 @@ def a_beber():
 
 def vilja1():
     # @todo: needs a new palette for flat white.
+    # only the outer two lit
     StageLights.apply(blackout)
 
 
@@ -158,9 +194,12 @@ def vilja2():
     start()
     sleep(5)
     # @todo: needs a new pattern for crossfade.
+    # Note: needs a blackout palette before starting the twinkle.
     StageLights.apply(LEDPreset(palettes["Ocean"],
                                 patterns["Static Gradient 1D"],
-                                secondary_pattern=8))
+                                secondary_pattern=8,
+                                secondary_speed=0.88,
+                                secondary_scale=5.71))
 
 
 def belle_nuit():
@@ -176,7 +215,7 @@ def belle_nuit():
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
-    },"""
+    }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
 
