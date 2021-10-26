@@ -78,7 +78,7 @@ def willkommen():
     }
     """
     params = json.loads(params)
-    StageLights.apply(LEDPreset(params))
+    StageLights.apply(LEDPreset(**params))
 
 
 def moderation():
@@ -148,7 +148,7 @@ def a_beber():
     }
     """
     params = json.loads(params)
-    StageLights.apply(LEDPreset(params))
+    StageLights.apply(LEDPreset(**params))
 
 
 def vilja1():
@@ -183,7 +183,7 @@ def belle_nuit():
         "secondary_speed": 0.08
     },"""
     params = json.loads(params)
-    StageLights.apply(LEDPreset(params))
+    StageLights.apply(LEDPreset(**params))
 
 
 def sempre_mobile():
