@@ -263,6 +263,111 @@ def end():
     ))
 
 
+def anvil():
+    apply_from_json("""
+    {
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 160,
+        "primary_pattern": 141,
+        "primary_scale": 1.0,
+        "primary_speed": 0.25,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -0.09,
+        "secondary_speed": 1.32
+    }""")
+
+
+def dont_stop_me():
+    apply_from_json("""{
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 190,
+        "primary_pattern": 141,
+        "primary_scale": 1.0,
+        "primary_speed": 0.25,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -0.09,
+        "secondary_speed": 1.32
+    }""")
+
+
+def ombra_mai_fu():
+    # @todo: gradually fade from purple to red.
+    # Backup:
+    apply_from_json(""" {
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 1635285216783,
+        "primary_pattern": 1635285209252,
+        "primary_scale": 1.0,
+        "primary_speed": 0.05,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -0.09,
+        "secondary_speed": 1.32
+    }""")
+
+
+def non_credea():
+    StageLights.apply(blackout)
+    # Todo: loop to gradually grow brightness to 0.9
+    # White light only. Ends around the end of the cavatina.
+
+
+def non_giunge():
+    apply_from_json(""" {
+        "brightness": 1,
+        "color_temp": 6000,
+        "palette": 1635285809894,
+        "primary_pattern": 1634079287296,
+        "primary_scale": 1.0,
+        "primary_speed": 0.56,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -0.09,
+        "secondary_speed": 1.32
+    }""")
+
+
+def una_furtiva():
+    apply_from_json(""" {
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 1635285988457,
+        "primary_pattern": 100,
+        "primary_scale": -3.43,
+        "primary_speed": 0.16,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -0.09,
+        "secondary_speed": 1.32
+    }""")
+
+
+def when_i_am_laid():
+    apply_from_json("""
+    {
+        "brightness": 0.85,
+        "color_temp": 12000,
+        "palette": 1634907211469,
+        "primary_pattern": 1,
+        "primary_scale": 0.0,
+        "primary_speed": 0.99,
+        "saturation": 1.0,
+        "secondary_pattern": 7,
+        "secondary_scale": 0.91,
+        "secondary_speed": 0.59
+    }""")
+
+
+def apply_from_json(params):
+    params = json.loads(params)
+    StageLights.apply(LEDPreset(**params))
+
+
 PLAYLIST = (
     start,
     willkommen,  # Willkommen
@@ -280,5 +385,20 @@ PLAYLIST = (
     belle_nuit,  # Belle nuit
     sempre_mobile,  # Sempre mobile
     fledermaus_brindisi,  # Fledermaus Brindisi
-    end  # End of the first half
+    end,  # End of the first half
+    anvil,  # Anvil coro
+    moderation,  # Text Anne
+    dont_stop_me,  # Don't stop me now
+    moderation,  # Text Anne
+    ombra_mai_fu,  # Ombra mai fu
+    non_credea,  # Text CarrieAnne and ah non credea cavatina
+    non_giunge,  # Ah non giunge
+    moderation,  # Text Guillermo
+    una_furtiva,  # Una furtiva lagrima
+    when_i_am_laid  # When I am laid
+
+
+
 )
+
+# @todo: don't forget to handle segfaults!
