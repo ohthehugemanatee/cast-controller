@@ -221,17 +221,40 @@ def belle_nuit():
 
 
 def sempre_mobile():
-    StageLights.apply(LEDPreset(
-        palettes["Golden Hour"],
-        patterns["Palette Scan Mirrored 1D"]
-    ))
+    params = """
+    {
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 1635283757687,
+        "primary_pattern": 1635283894849,
+        "primary_scale": 1.0,
+        "primary_speed": 0.05,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": 0.0,
+        "secondary_speed": 0.05
+    }"""
+
+    params = json.loads(params)
+    StageLights.apply(LEDPreset(**params))
 
 
 def fledermaus_brindisi():
-    StageLights.apply(LEDPreset(
-        palettes["Sunset Light"],
-        patterns["Blackbody pulse from center"],
-    ))
+    params = """
+    {
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 1634906800552,
+        "primary_pattern": 0,
+        "primary_scale": 1.0,
+        "primary_speed": 0.05,
+        "saturation": 1.0,
+        "secondary_pattern": 8,
+        "secondary_scale": -8.74,
+        "secondary_speed": 1.24
+    }"""
+    params = json.loads(params)
+    StageLights.apply(LEDPreset(**params))
 
 
 def end():
