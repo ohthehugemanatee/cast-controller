@@ -379,6 +379,22 @@ def es_ist_einmal():
         }""")
 
 
+def mendelsohn():
+    apply_from_json("""
+        "params": {
+        "brightness": 0.55,
+        "color_temp": 8000,
+        "palette": 190,
+        "primary_pattern": 180,
+        "primary_scale": 0.0,
+        "primary_speed": 0.22,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -5.4,
+        "secondary_speed": 0.08
+    }""")
+
+
 def dimgh():
     apply_from_json("""
      {
@@ -392,6 +408,54 @@ def dimgh():
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
+    }""")
+
+
+def funiculi():
+    apply_from_json("""
+    {
+        "brightness": 0.55,
+        "color_temp": 8000,
+        "palette": 90,
+        "primary_pattern": 170,
+        "primary_scale": 6.75,
+        "primary_speed": 0.03,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": -5.4,
+        "secondary_speed": 0.08
+    }""")
+
+
+def heia():
+    apply_from_json("""
+    {
+        "brightness": 1.0,
+        "color_temp": 5830,
+        "palette": 190,
+        "primary_pattern": 100,
+        "primary_scale": -3.43,
+        "primary_speed": 0.16,
+        "saturation": 1.0,
+        "secondary_pattern": 8,
+        "secondary_scale": 0.51,
+        "secondary_speed": 0.77
+    }""")
+
+
+def lippen_schweigen():
+    apply_from_json("""
+    {
+        "brightness": 1.0,
+        "color_temp": 5830,
+        "palette": 1634158357712,
+        "primary_pattern": 141,
+        "primary_scale": 1.0,
+        "primary_speed": 0.15,
+        "saturation": 1.0,
+        "secondary_pattern": 7,
+        "secondary_scale": 0.51,
+        "secondary_speed": 0.3 
     }""")
 
 
@@ -430,9 +494,12 @@ PLAYLIST = (
     when_i_am_laid,  # When I am laid
     es_ist_einmal,  # Es ist einmal im Leben so
     moderation,  # Interview anne and yu
+    mendelsohn,  # Mendelssohn Hochzeitsmarsch
     dimgh,  # Dein ist mein ganzes Herz
-
-
+    funiculi,   # Funiculi
+    heia,  # Heia
+    lippen_schweigen,  # Lippen schweigen
+    end
 
 )
 
