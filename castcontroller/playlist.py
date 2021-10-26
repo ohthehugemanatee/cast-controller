@@ -18,8 +18,7 @@ def run_playlist(input_device):
     device = InputDevice(input_device)
 
     player = deque(PLAYLIST)
-    current = player[0]
-    print("Executing {}".format(current))
+    print("Executing {}".format(player[0].func_name))
     player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
@@ -31,7 +30,7 @@ def run_playlist(input_device):
                 elif e.keycode == 'KEY_PAGEUP':
                     # Previous
                     player.rotate(1)
-                print("Executing {}".format(player[0]))
+                print("Executing {}".format(player[0].func_name))
                 player[0]()
                 sys.stdout.flush()
 
@@ -209,7 +208,6 @@ def end():
 
 PLAYLIST = (
     start,
-    overture,  # Ouvertüre in Teilen von Yu
     willkommen,  # Willkommen
     moderation,  # Eröffnungstext Anne und Till
     zitti_zitti,  # Zitti zitti  / Sempre mobile
