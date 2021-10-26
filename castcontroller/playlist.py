@@ -65,7 +65,6 @@ def willkommen():
         {
         "brightness": 1.0,
         "color_temp": 5830,
-        "gamma": 1.0,
         "palette": 1634158357712,
         "primary_pattern": 141,
         "primary_scale": 1.0,
@@ -135,7 +134,6 @@ def a_beber():
         {
         "brightness": 0.55,
         "color_temp": 12000,
-        "gamma": 1.0,
         "palette": 150,
         "primary_pattern": 140,
         "primary_scale": 3.03,
@@ -171,7 +169,6 @@ def belle_nuit():
         {
         "brightness": 0.55,
         "color_temp": 8000,
-        "gamma": 1.0,
         "palette": 170,
         "primary_pattern": 140,
         "primary_scale": 3.03,
