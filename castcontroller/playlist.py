@@ -11,7 +11,8 @@ from castcontroller.pattern_library import palettes, patterns
 StageLights = LEDs()
 
 # Helpful blackout preset
-blackout = LEDPreset(palette=palettes["Blackout"], primary_pattern=patterns['Blackout'])
+blackout = LEDPreset(
+    palette=palettes["Blackout"], primary_pattern=patterns['Blackout'])
 
 
 def run_playlist(input_device):
@@ -82,6 +83,7 @@ def willkommen():
 
 
 def moderation():
+    # Sometimes way too fucking fast. Declare a speed.
     StageLights.apply(
         LEDPreset(palettes["Sunset Light"],
                   patterns["Palette Plasma 2D"],
@@ -107,6 +109,7 @@ def zitti_zitti():
 
 
 def norma():
+    # Check with bryn: timing of norma
     params = """
     {
         "brightness": 0.6,
@@ -138,7 +141,7 @@ def norma():
 
 
 def ganz_ohne_weiber():
-    # The loop is still not working. :(
+    # @todo: remove timed things
     base = LEDPreset(
         palettes["Miami"],
         patterns["Palette Plasma 2D"],
@@ -175,6 +178,7 @@ def granada():
 
 
 def a_beber():
+    # @todo: this is wayyyy to fast. A third as fast would be OK.
     params = """
         {
         "brightness": 0.55,
@@ -212,7 +216,8 @@ def vilja2():
     StageLights.apply(blackout)
     sleep(3)
     # @todo: needs a new pattern for (audience) right to left with her snaps.
-    # Note: needs a blackout palette before starting the twinkle.
+    # weird flash when it goes to start the twinkle?
+    # Twinkle moves too fast. when it's fading in
     base = LEDPreset(palettes["Ocean"],
                      patterns["Static Gradient 1D"],
                      brightness=0,
@@ -268,6 +273,9 @@ def sempre_mobile():
 
 
 def fledermaus_brindisi():
+    # glimmering alternates slow and fast.
+    # Wrong color. Should be in white.
+    # second time through it eventually switched to white.
     params = """
     {
         "brightness": 1.0,
@@ -292,6 +300,7 @@ def end():
 
 
 def anvil():
+    # would be nice with a fade in
     apply_from_json("""
     {
         "brightness": 1.0,
@@ -418,7 +427,7 @@ def es_ist_einmal():
 
 def mendelsohn():
     apply_from_json("""
-        "params": {
+        {
         "brightness": 0.55,
         "color_temp": 8000,
         "palette": 190,
@@ -510,17 +519,17 @@ PLAYLIST = (
     moderation,  # Text Till
     ganz_ohne_weiber,  # Ganz ohne Weiber
     granada,  # Granada
-    moderation,  # Text Anne
+    moderation,  # Text Anne. Maybe remove the light cue it's so short
     a_beber,  # A beber
     moderation,  # Text Sascha
-    vilja1,  # Viljalied opening
+    vilja1,  # Viljalied opening (cue: njet njet njet)
     vilja2,  # Viljalied starting when she says NEIN.
     belle_nuit,  # Belle nuit
     sempre_mobile,  # Sempre mobile
     fledermaus_brindisi,  # Fledermaus Brindisi
     end,  # End of the first half
     anvil,  # Anvil coro
-    moderation,  # Text Anne
+    moderation,  # Text Anne . Something in here fucks up the speed.
     dont_stop_me,  # Don't stop me now
     moderation,  # Text Anne
     ombra_mai_fu,  # Ombra mai fu
@@ -528,6 +537,7 @@ PLAYLIST = (
     non_giunge,  # Ah non giunge
     moderation,  # Text Guillermo
     una_furtiva,  # Una furtiva lagrima
+    moderation,  # Short when I am laid moderation from Anne.
     when_i_am_laid,  # When I am laid
     es_ist_einmal,  # Es ist einmal im Leben so
     moderation,  # Interview anne and yu
