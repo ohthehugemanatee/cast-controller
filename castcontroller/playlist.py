@@ -88,7 +88,8 @@ def moderation():
         LEDPreset(palettes["Sunset Light"],
                   patterns["Palette Plasma 2D"],
                   brightness=0.55,
-                  primary_speed=0.05))
+                  primary_speed=0.1,
+                  primary_scale=1))
 
 
 def zitti_zitti():
