@@ -11,7 +11,7 @@ from castcontroller.pattern_library import palettes, patterns
 StageLights = LEDs()
 
 # Helpful blackout preset
-blackout = LEDPreset(primary_pattern=patterns['Blackout'])
+blackout = LEDPreset(palette=palettes["Blackout"], primary_pattern=patterns['Blackout'])
 
 
 def run_playlist(input_device):
@@ -19,6 +19,7 @@ def run_playlist(input_device):
 
     player = deque(PLAYLIST)
     print("Executing {}".format(player[0].__name__))
+    StageLights.apply(blackout)
     player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
@@ -31,6 +32,7 @@ def run_playlist(input_device):
                     # Previous
                     player.rotate(1)
                 print("Executing {}".format(player[0].__name__))
+                StageLights.apply(blackout)
                 player[0]()
                 sys.stdout.flush()
 

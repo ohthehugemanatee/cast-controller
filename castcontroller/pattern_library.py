@@ -25,4 +25,5 @@ palettes = {
     "Purple": 200,
     "Hot Pink": 210,
     "White": 1634906800552,
+    "Blackout": 1635333252565,
 }
