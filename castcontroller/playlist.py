@@ -21,6 +21,11 @@ def run_playlist(input_device):
     player = deque(PLAYLIST)
     print("Executing {}".format(player[0].__name__))
     StageLights.apply(blackout)
+    if len(sys.argv) > 1:
+        arg = str(sys.argv[1])
+        print("argument is " + arg)
+        while player[0].__name__ is not arg:
+            player.rotate(1)
     player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
