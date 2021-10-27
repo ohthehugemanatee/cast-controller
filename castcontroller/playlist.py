@@ -39,19 +39,6 @@ def run_playlist(input_device):
 
 
 def start():
-    color = LEDPreset(palettes['Sunset Light'], patterns['Static Color'])
-    StageLights.apply(blackout)
-    sleep(2)
-    StageLights.apply(color)
-    sleep(2)
-    StageLights.apply(blackout)
-    sleep(2)
-    StageLights.apply(color)
-    sleep(2)
-    StageLights.apply(blackout)
-    sleep(2)
-    StageLights.apply(color)
-    sleep(2)
     StageLights.apply(blackout)
     return
 
