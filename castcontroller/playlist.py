@@ -87,7 +87,8 @@ def moderation():
     StageLights.apply(
         LEDPreset(palettes["Sunset Light"],
                   patterns["Palette Plasma 2D"],
-                  brightness=0.55))
+                  brightness=0.55,
+                  primary_speed=0.33))
 
 
 def zitti_zitti():
