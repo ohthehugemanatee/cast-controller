@@ -207,13 +207,25 @@ def vilja1():
 
 
 def vilja2():
+    StageLights.apply(blackout)
+    sleep(3)
     # @todo: needs a new pattern for (audience) right to left with her snaps.
     # Note: needs a blackout palette before starting the twinkle.
-    StageLights.apply(LEDPreset(palettes["Ocean"],
-                                patterns["Static Gradient 1D"],
-                                secondary_pattern=8,
-                                secondary_speed=0.88,
-                                secondary_scale=5.71))
+    base = LEDPreset(palettes["Ocean"],
+                     patterns["Static Gradient 1D"],
+                     brightness=0,
+                     secondary_pattern=8,
+                     secondary_speed=0.88,
+                     secondary_scale=5.71)
+    StageLights.apply(base)
+    while base.brightness < 1:
+        brightness = base.brightness + 0.03
+        base.brightness = round(brightness, 3)
+        # Cap it to 1 otherwise the value wraps around.
+        if base.brightness > 1:
+            base.brightness = 1
+        StageLights.apply(base)
+        sleep(0.3)
 
 
 def belle_nuit():
