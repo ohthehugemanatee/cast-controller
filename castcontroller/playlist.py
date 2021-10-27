@@ -144,14 +144,22 @@ def ganz_ohne_weiber():
     )
     StageLights.apply(base)
     sleep(50)  # Or could be a cue?
-    for i in range(0, 30):
-        new_base = base
+    for i in range(30):
+        apply = False
         if base.brightness < 1:
-            new_base.brightness = base.brightness + 0.05
+            brightness = base.brightness + 0.03
+            base.brightness = round(brightness, 3)
+            # Cap it to 1 otherwise the value wraps around.
+            if base.brightness > 1:
+                base.brightness = 1
+            apply = True
         if base.primary_speed < 1:
-            new_base.primary_speed = base.primary_speed + 0.05
-        if new_base != base:
-            base = new_base
+            primary_speed = base.primary_speed + 0.03
+            base.primary_speed = round(primary_speed, 3)
+            if base.primary_speed > 1:
+                base.primary_speed = 1
+            apply = True
+        if apply is True:
             StageLights.apply(base)
         sleep(1)
 
