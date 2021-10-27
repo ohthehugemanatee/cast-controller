@@ -338,9 +338,18 @@ def ombra_mai_fu():
 
 
 def non_credea():
-    StageLights.apply(blackout)
-    # Todo: loop to gradually grow brightness to 0.9
-    # White light only. Ends around the end of the cavatina.
+    base = LEDPreset(palettes["White"],
+                     patterns["Static Color"],
+                     brightness=0.1)
+    StageLights.apply(base)
+    while base.brightness < 1:
+        brightness = base.brightness + 0.03
+        base.brightness = round(brightness, 3)
+        # Cap it to 1 otherwise the value wraps around.
+        if base.brightness > 1:
+            base.brightness = 1
+        StageLights.apply(base)
+        sleep(0.3)
 
 
 def non_giunge():

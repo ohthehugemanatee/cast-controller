@@ -23,5 +23,6 @@ palettes = {
     "Ocean": 170,
     "Sky Blue": 190,
     "Purple": 200,
-    "Hot Pink": 210
+    "Hot Pink": 210,
+    "White": 1634906800552,
 }
