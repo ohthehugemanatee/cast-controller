@@ -97,7 +97,7 @@ def zitti_zitti():
     StageLights.apply(LEDPreset(**params))
 
 
-def norma():
+def norma1():
     # Check with bryn: timing of norma
     params = """
     {
@@ -116,15 +116,32 @@ def norma():
     params = json.loads(params)
     base = LEDPreset(**params)
     StageLights.apply(base)
-    sleep(120)
-    for i in range(0, 45):
-        new_base = base
+
+
+def norma2():
+    params = """
+    {
+        "brightness": 0.6,
+        "color_temp": 6000,
+        "palette": 1635282276093,
+        "primary_pattern": 141,
+        "primary_scale": 1.0,
+        "primary_speed": 1,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": 0.0,
+        "secondary_speed": 0.33
+    }"""
+    params = json.loads(params)
+    base = LEDPreset(**params)
+    StageLights.apply(base)
+    for i in range(30):
         if base.brightness < 1:
-            new_base.brightness = base.brightness + 0.02
-        if base.primary_speed < 1.2:
-            new_base.primary_speed = base.primary_speed + 0.02
-        if new_base != base:
-            base = new_base
+            brightness = base.brightness + 0.03
+            base.brightness = round(brightness, 3)
+            # Cap it to 1 otherwise the value wraps around.
+            if base.brightness > 1:
+                base.brightness = 1
             StageLights.apply(base)
         sleep(1)
 
@@ -504,7 +521,8 @@ PLAYLIST = (
     willkommen,  # Willkommen
     moderation,  # Eröffnungstext Anne und Till
     zitti_zitti,  # Zitti zitti  / Sempre mobile
-    norma,  # Mira, o Norma
+    norma1,  # Mira, o Norma cavatina
+    norma2,  # Mira, o Norma cabaletta
     moderation,  # Text Till
     ganz_ohne_weiber,  # Ganz ohne Weiber
     granada,  # Granada
