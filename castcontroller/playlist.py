@@ -192,16 +192,22 @@ def a_beber():
 
 
 def vilja1():
-    # @todo: needs a new palette for flat white.
-    # only the outer two lit
-    StageLights.apply(blackout)
+    apply_from_json("""{
+        "brightness": 1.0,
+        "color_temp": 6000,
+        "palette": 1634906800552,
+        "primary_pattern": 1635324171757,
+        "primary_scale": 1.0,
+        "primary_speed": 0.53,
+        "saturation": 1.0,
+        "secondary_pattern": 0,
+        "secondary_scale": 0.51,
+        "secondary_speed": 1.0
+    }""")
 
 
 def vilja2():
     # @todo: needs a new pattern for (audience) right to left with her snaps.
-    start()
-    sleep(5)
-    # @todo: needs a new pattern for crossfade.
     # Note: needs a blackout palette before starting the twinkle.
     StageLights.apply(LEDPreset(palettes["Ocean"],
                                 patterns["Static Gradient 1D"],
