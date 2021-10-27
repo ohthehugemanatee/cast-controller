@@ -146,31 +146,29 @@ def norma2():
         sleep(1)
 
 
-def ganz_ohne_weiber():
-    # @todo: remove timed things
+def ganz_ohne_weiber1():
     base = LEDPreset(
         palettes["Miami"],
         patterns["Palette Plasma 2D"],
         brightness=0.3
     )
     StageLights.apply(base)
-    sleep(50)  # Or could be a cue?
+
+
+def ganz_ohne_weiber2():
+    base = LEDPreset(
+        palettes["Miami"],
+        patterns["Palette Plasma 2D"],
+        brightness=0.3,
+        primary_speed=1
+    )
     for i in range(30):
-        apply = False
         if base.brightness < 1:
             brightness = base.brightness + 0.03
             base.brightness = round(brightness, 3)
             # Cap it to 1 otherwise the value wraps around.
             if base.brightness > 1:
                 base.brightness = 1
-            apply = True
-        if base.primary_speed < 1:
-            primary_speed = base.primary_speed + 0.03
-            base.primary_speed = round(primary_speed, 3)
-            if base.primary_speed > 1:
-                base.primary_speed = 1
-            apply = True
-        if apply is True:
             StageLights.apply(base)
         sleep(1)
 
@@ -524,7 +522,8 @@ PLAYLIST = (
     norma1,  # Mira, o Norma cavatina
     norma2,  # Mira, o Norma cabaletta
     moderation,  # Text Till
-    ganz_ohne_weiber,  # Ganz ohne Weiber
+    ganz_ohne_weiber1,  # Ganz ohne Weiber recit
+    ganz_ohne_weiber2,  # Ganz ohne Weiber fun part
     granada,  # Granada
     moderation,  # Text Anne. Maybe remove the light cue it's so short
     a_beber,  # A beber
