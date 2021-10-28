@@ -108,7 +108,7 @@ def zitti_zitti():
      {
         "brightness": 1,
         "palette": 1635281872064,
-        "primary_pattern": 1635426084409,
+        "primary_pattern": 1635426084409
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
