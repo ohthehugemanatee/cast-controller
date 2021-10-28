@@ -10,20 +10,30 @@ from dataclasses import dataclass, asdict
 class LEDPreset:
     palette: int = 0
     primary_pattern: int = 0
-    primary_scale: float = 1
-    primary_speed: float = 0.05
     secondary_pattern: int = 0
-    secondary_scale: float = 0
-    secondary_speed: float = 0.05
-    brightness: float = 1.0
+    brightness: float = 0.9
 
 class LEDs:
     currentSettings = {}
+
+    allowedSettings = (
+        "brightness",
+        "palette",
+        "primary_pattern",
+        "primary_scale",
+        "primary_speed",
+        "secondary_pattern",
+        "secondary_scale",
+        "secondary_speed"
+    )
 
     def apply(self, new_preset: LEDPreset):
         requests_to_send = {}
         for k, v in asdict(new_preset).items():
             if k not in self.currentSettings or self.currentSettings[k] != v:
+                if k not in self.allowedSettings:
+                    print("Cowardly refusing to set unknown key: " + k)
+                    continue
                 requests_to_send[k] = v
         asyncio.run(self.send_requests(requests_to_send))
 
