@@ -57,7 +57,7 @@ def run_playlist(input_device):
     print("Starting from {}".format(player[0].__name__))
     player[0]()
     # Double-click protection: require a minimum time between clicks.
-    time_limit = datetime.timedelta(seconds=0.25)
+    time_limit = datetime.timedelta(seconds=1)
     # Start with a dummy timestamp for last change
     now = datetime.datetime.now()
     last_change_timestamp = now - datetime.timedelta(minutes=2)
