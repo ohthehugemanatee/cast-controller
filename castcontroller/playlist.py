@@ -87,13 +87,6 @@ def start():
     return
 
 
-def overture():
-    StageLights.apply(LEDPreset(palettes["Sky Blue"],
-                                patterns["Palette Plasma 2D"],
-                                primary_speed=0.3,
-                                secondary_speed=0.1))
-
-
 def willkommen():
     params = """
         {
