@@ -129,7 +129,7 @@ def zitti_zitti():
         "primary_pattern": 180,
         "primary_scale": 1.0,
         "primary_speed": 0.2,
-                "secondary_pattern": 0,
+        "secondary_pattern": 0,
         "secondary_scale": 0.0,
         "secondary_speed": 0.33
     }"""
