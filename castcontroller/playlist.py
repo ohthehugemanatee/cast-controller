@@ -304,7 +304,7 @@ def es_ist_einmal():
     apply_from_json("""
     {
         "palette": 1635287289272,
-        "primary_pattern": 1635440199649,
+        "primary_pattern": 1635440199649
         }""")
 
 
