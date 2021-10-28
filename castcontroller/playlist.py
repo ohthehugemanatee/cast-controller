@@ -59,6 +59,7 @@ def run_playlist(input_device):
     # Double-click protection: require a minimum time between clicks.
     time_limit = datetime.timedelta(seconds=0.5)
     # Start with a dummy timestamp for last change
+    now = datetime.datetime.now()
     last_change_timestamp = now - datetime.timedelta(minutes=2)
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
