@@ -299,11 +299,8 @@ def ombra_mai_fu():
     # @todo: gradually fade from purple to red.
     # Backup:
     apply_from_json(""" {
-        "brightness": 1.0,
         "palette": 1635285216783,
-        "primary_pattern": 1635285209252,
-        "primary_scale": 1.0,
-        "primary_speed": 0.05
+        "primary_pattern": 1635285209252
         }""")
 
 
@@ -326,7 +323,6 @@ def non_giunge():
 
 def una_furtiva():
     apply_from_json(""" {
-        "brightness": 1.0,
         "palette": 1635285988457,
         "primary_pattern": 100,
         "primary_scale": -3.43,
@@ -338,24 +334,20 @@ def when_i_am_laid():
     # @todo: grow brightness
     apply_from_json("""
     {
-        "brightness": 1,
         "palette": 1634907211469,
-        "primary_pattern": 1635286756259,
-        "primary_scale": 1.0,
-        "primary_speed": 0.27,
-            }""")
+        "primary_pattern": 1635286756259
+        }""")
 
 
 def es_ist_einmal():
     # @todo: correct the palette
     apply_from_json("""
     {
-        "brightness": 1.0,
         "palette": 1635287289272,
         "primary_pattern": 120,
         "primary_scale": 1.0,
         "primary_speed": 0.28,
-            }""")
+        }""")
 
 
 def mendelsohn():
@@ -373,7 +365,7 @@ def mendelsohn():
 def dimgh():
     apply_from_json("""
      {
-        "brightness": 0.55,
+        "brightness": 0.85,
         "palette": 1634910211574,
         "primary_pattern": 180,
         "primary_scale": 0.0,
@@ -384,7 +376,7 @@ def dimgh():
 def funiculi():
     apply_from_json("""
     {
-        "brightness": 0.55,
+        "brightness": 1,
         "palette": 90,
         "primary_pattern": 170,
         "primary_scale": 6.75,
@@ -409,7 +401,6 @@ def heia():
 def lippen_schweigen():
     apply_from_json("""
     {
-        "brightness": 1.0,
         "palette": 1634158357712,
         "primary_pattern": 141,
         "primary_scale": 1.0,
