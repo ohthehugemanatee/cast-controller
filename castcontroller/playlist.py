@@ -129,9 +129,6 @@ def zitti_zitti():
         "primary_pattern": 180,
         "primary_scale": 1.0,
         "primary_speed": 0.2,
-        "secondary_pattern": 0,
-        "secondary_scale": 0.0,
-        "secondary_speed": 0.33
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
@@ -146,10 +143,7 @@ def norma1():
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.25,
-        "secondary_pattern": 0,
-        "secondary_scale": 0.0,
-        "secondary_speed": 0.33
-    }"""
+        }"""
 
     params = json.loads(params)
     base = LEDPreset(**params)
@@ -164,10 +158,7 @@ def norma2():
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 1,
-        "secondary_pattern": 0,
-        "secondary_scale": 0.0,
-        "secondary_speed": 0.33
-    }"""
+        }"""
     params = json.loads(params)
     base = LEDPreset(**params)
     StageLights.apply(base)
@@ -226,10 +217,7 @@ def a_beber():
         "primary_pattern": 140,
         "primary_scale": 3.03,
         "primary_speed": 0.06,
-        "secondary_pattern": 0,
-        "secondary_scale": -5.4,
-        "secondary_speed": 0.08
-    }
+        }
     """
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
@@ -242,10 +230,7 @@ def vilja1():
         "primary_pattern": 1635324171757,
         "primary_scale": 1.0,
         "primary_speed": 0.53,
-        "secondary_pattern": 0,
-        "secondary_scale": 0.51,
-        "secondary_speed": 1.0
-    }""")
+        }""")
 
 
 def vilja2():
@@ -279,10 +264,7 @@ def belle_nuit():
         "primary_pattern": 140,
         "primary_scale": 3.03,
         "primary_speed": 0.06,
-        "secondary_pattern": 0,
-        "secondary_scale": -5.4,
-        "secondary_speed": 0.08
-    }"""
+        }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
 
@@ -295,10 +277,7 @@ def sempre_mobile():
         "primary_pattern": 1635283894849,
         "primary_scale": 1.0,
         "primary_speed": 0.05,
-        "secondary_pattern": 0,
-        "secondary_scale": 0.0,
-        "secondary_speed": 0.05
-    }"""
+        }"""
 
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
@@ -338,10 +317,7 @@ def anvil():
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.25,
-        "secondary_pattern": 0,
-        "secondary_scale": -0.09,
-        "secondary_speed": 1.32
-    }""")
+        }""")
 
 
 def dont_stop_me():
@@ -351,10 +327,7 @@ def dont_stop_me():
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.25,
-        "secondary_pattern": 0,
-        "secondary_scale": -0.09,
-        "secondary_speed": 1.32
-    }""")
+        }""")
 
 
 def ombra_mai_fu():
@@ -366,10 +339,7 @@ def ombra_mai_fu():
         "primary_pattern": 1635285209252,
         "primary_scale": 1.0,
         "primary_speed": 0.05,
-        "secondary_pattern": 0,
-        "secondary_scale": -0.09,
-        "secondary_speed": 1.32
-    }""")
+        }""")
 
 
 def non_credea():
@@ -386,10 +356,7 @@ def non_giunge():
         "primary_pattern": 1634079287296,
         "primary_scale": 1.0,
         "primary_speed": 0.56,
-        "secondary_pattern": 0,
-        "secondary_scale": -0.09,
-        "secondary_speed": 1.32
-    }""")
+        }""")
 
 
 def una_furtiva():
@@ -399,10 +366,7 @@ def una_furtiva():
         "primary_pattern": 100,
         "primary_scale": -3.43,
         "primary_speed": 0.16,
-        "secondary_pattern": 0,
-        "secondary_scale": -0.09,
-        "secondary_speed": 1.32
-    }""")
+        }""")
 
 
 def when_i_am_laid():
@@ -414,10 +378,7 @@ def when_i_am_laid():
         "primary_pattern": 1635286756259,
         "primary_scale": 1.0,
         "primary_speed": 0.27,
-        "secondary_pattern": 0,
-        "secondary_scale": 2.0,
-        "secondary_speed": 0.59
-        }""")
+            }""")
 
 
 def es_ist_einmal():
@@ -429,10 +390,7 @@ def es_ist_einmal():
         "primary_pattern": 120,
         "primary_scale": 1.0,
         "primary_speed": 0.28,
-        "secondary_pattern": 0,
-        "secondary_scale": 2.0,
-        "secondary_speed": 0.59
-        }""")
+            }""")
 
 
 def mendelsohn():
@@ -444,10 +402,7 @@ def mendelsohn():
         "primary_pattern": 180,
         "primary_scale": 0.0,
         "primary_speed": 0.22,
-        "secondary_pattern": 0,
-        "secondary_scale": -5.4,
-        "secondary_speed": 0.08
-    }""")
+        }""")
 
 
 def dimgh():
@@ -458,10 +413,7 @@ def dimgh():
         "primary_pattern": 180,
         "primary_scale": 0.0,
         "primary_speed": 0.22,
-        "secondary_pattern": 0,
-        "secondary_scale": -5.4,
-        "secondary_speed": 0.08
-    }""")
+        }""")
 
 
 def funiculi():
@@ -472,10 +424,7 @@ def funiculi():
         "primary_pattern": 170,
         "primary_scale": 6.75,
         "primary_speed": 0.03,
-        "secondary_pattern": 0,
-        "secondary_scale": -5.4,
-        "secondary_speed": 0.08
-    }""")
+        }""")
 
 
 def heia():
