@@ -4,9 +4,8 @@ import aiohttp
 import asyncio
 from dataclasses import dataclass, asdict
 
-# Data class for light settings
-
-
+# Data class for light settings. NB we never use saturation or color temp, 
+# so they're removed.
 @dataclass
 class LEDPreset:
     palette: int = 0
