@@ -120,9 +120,7 @@ def norma1():
     {
         "brightness": 0.6,
         "palette": 1635282276093,
-        "primary_pattern": 141,
-        "primary_scale": 1.0,
-        "primary_speed": 0.25
+        "primary_pattern": 1635426495476
         }"""
 
     params = json.loads(params)
@@ -135,9 +133,7 @@ def norma2():
     {
         "brightness": 0.6,
         "palette": 1635282276093,
-        "primary_pattern": 141,
-        "primary_scale": 1.0,
-        "primary_speed": 1
+        "primary_pattern": 1635426570105,
         }"""
     params = json.loads(params)
     base = LEDPreset(**params)
@@ -156,7 +152,7 @@ def norma2():
 def ganz_ohne_weiber1():
     base = LEDPreset(
         palettes["Miami"],
-        patterns["Palette Plasma 2D"],
+        1635426637210,
         brightness=0.3
     )
     StageLights.apply(base)
@@ -165,9 +161,8 @@ def ganz_ohne_weiber1():
 def ganz_ohne_weiber2():
     base = LEDPreset(
         palettes["Miami"],
-        patterns["Palette Plasma 2D"],
-        brightness=0.3,
-        primary_speed=1
+        1635426783275,
+        brightness=0.3
     )
     for i in range(30):
         if base.brightness < 1:
@@ -183,20 +178,16 @@ def ganz_ohne_weiber2():
 def granada():
     StageLights.apply(LEDPreset(
         palettes["Golden Hour"],
-        patterns["Palette Fractal Plasma 2D"],
-        primary_speed=0.3
+        1635426908951
     ))
 
 
 def a_beber():
-    # @todo: this is wayyyy to fast. A third as fast would be OK.
     params = """
         {
         "brightness": 0.55,
         "palette": 150,
-        "primary_pattern": 140,
-        "primary_scale": 3.03,
-        "primary_speed": 0.06
+        "primary_pattern": 1635427041369
         }
     """
     params = json.loads(params)
@@ -208,8 +199,6 @@ def vilja1():
         "brightness": 1.0,
         "palette": 1634906800552,
         "primary_pattern": 1635324171757,
-        "primary_scale": 1.0,
-        "primary_speed": 0.53
         }""")
 
 
@@ -220,7 +209,7 @@ def vilja2():
     # weird flash when it goes to start the twinkle?
     # Twinkle moves too fast. when it's fading in
     base = LEDPreset(palettes["Ocean"],
-                     patterns["Static Gradient 1D"],
+                     1635427181230,
                      brightness=0,
                      secondary_pattern=8,
                      secondary_speed=0.88,
@@ -241,9 +230,7 @@ def belle_nuit():
         {
         "brightness": 0.55,
         "palette": 170,
-        "primary_pattern": 140,
-        "primary_scale": 3.03,
-        "primary_speed": 0.06
+        "primary_pattern": 1635427261230
         }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
@@ -272,8 +259,6 @@ def fledermaus_brindisi():
         "brightness": 1.0,
         "palette": 1634906800552,
         "primary_pattern": 0,
-        "primary_scale": 1.0,
-        "primary_speed": 0.05,
         "secondary_pattern": 8,
         "secondary_scale": -8.74,
         "secondary_speed": 1.24
