@@ -133,7 +133,7 @@ def norma2():
     {
         "brightness": 0.6,
         "palette": 1635282276093,
-        "primary_pattern": 1635426570105,
+        "primary_pattern": 1635426570105
         }"""
     params = json.loads(params)
     base = LEDPreset(**params)
@@ -198,7 +198,7 @@ def vilja1():
     apply_from_json("""{
         "brightness": 1.0,
         "palette": 1634906800552,
-        "primary_pattern": 1635324171757,
+        "primary_pattern": 1635324171757
         }""")
 
 
