@@ -88,30 +88,19 @@ def start():
 
 
 def willkommen():
-    params = """
-        {
-        "brightness": 1.0,
-        "palette": 1634158357712,
-        "primary_pattern": 141,
-        "primary_scale": 1.0,
-        "primary_speed": 0.35,
-        "secondary_pattern": 7,
-        "secondary_scale": 0.51,
-        "secondary_speed": 0.3
-    }
-    """
-    params = json.loads(params)
-    StageLights.apply(LEDPreset(**params))
+    StageLights.apply(LEDPreset(
+        primary_pattern=1635425247769, 
+        palette=1634158357712, 
+        brightness=1,
+        secondary_pattern=7))
 
 
 def moderation():
-    # Sometimes way too fucking fast. Declare a speed.
     StageLights.apply(
         LEDPreset(palettes["Sunset Light"],
-                  patterns["Palette Plasma 2D"],
+                  1635425452181,
                   brightness=0.55,
-                  primary_speed=0.1,
-                  primary_scale=1))
+                  primary_speed=0.1))
 
 
 def zitti_zitti():
@@ -119,9 +108,7 @@ def zitti_zitti():
      {
         "brightness": 1,
         "palette": 1635281872064,
-        "primary_pattern": 180,
-        "primary_scale": 1.0,
-        "primary_speed": 0.2,
+        "primary_pattern": 1635426084409,
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
