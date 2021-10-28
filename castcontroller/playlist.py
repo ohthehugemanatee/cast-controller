@@ -6,26 +6,55 @@ from collections import deque
 from evdev import InputDevice, ecodes, categorize
 from castcontroller.ledcontrol import LEDs, LEDPreset
 from castcontroller.pattern_library import palettes, patterns
+from pathlib import Path
 
 
 StageLights = LEDs()
+position_file = Path('/tmp') / 'cast-controller'
 
 # Helpful blackout preset
 blackout = LEDPreset(
     palette=palettes["Blackout"], primary_pattern=patterns['Blackout'])
 
 
+def get_saved_position():
+    # Create file if it doesn't exist already
+    position_file.touch(exist_ok=True)
+    with open(str(position_file), mode='r') as data_file:
+        try:
+            position = data_file.read()
+            if position:
+                print(f'Loaded playlist position from {position_file}.')
+            else:
+                print('Creating a new datafile')
+        except Exception:
+            print(
+                f'Saved playlist position at {position_file} is old/invalid, ignoring.')
+    return position
+
+
+def save_position(value):
+    with open(str(position_file), 'w') as data_file:
+        try:
+            data_file.write(value)
+            print(f'Saved settings to {position_file}.')
+        except Exception:
+            print(f'Could not save settings to {position_file}.')
+
+
 def run_playlist(input_device):
     device = InputDevice(input_device)
 
     player = deque(PLAYLIST)
-    print("Executing {}".format(player[0].__name__))
-    StageLights.apply(blackout)
     if len(sys.argv) > 1:
-        arg = str(sys.argv[1])
-        while player[0].__name__ != arg:
+        position = str(sys.argv[1])
+    else:
+        position = get_saved_position()
+    if position:
+        while player[0].__name__ != position:
             player.rotate(1)
     print("Starting from {}".format(player[0].__name__))
+    StageLights.apply(blackout)
     player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
@@ -37,6 +66,7 @@ def run_playlist(input_device):
                 elif e.keycode == 'KEY_PAGEUP':
                     # Previous
                     player.rotate(1)
+                save_position(player[0].__name__)
                 print("Executing {}".format(player[0].__name__))
                 StageLights.apply(blackout)
                 player[0]()
