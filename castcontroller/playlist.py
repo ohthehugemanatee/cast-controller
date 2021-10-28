@@ -346,7 +346,7 @@ def es_ist_einmal():
         "palette": 1635287289272,
         "primary_pattern": 120,
         "primary_scale": 1.0,
-        "primary_speed": 0.28,
+        "primary_speed": 0.28
         }""")
 
 
