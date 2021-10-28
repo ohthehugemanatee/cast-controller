@@ -395,6 +395,7 @@ def una_furtiva():
 
 
 def when_i_am_laid():
+    # @todo: grow brightness
     apply_from_json("""
     {
         "brightness": 1,
@@ -411,6 +412,7 @@ def when_i_am_laid():
 
 
 def es_ist_einmal():
+    # @todo: correct the palette
     apply_from_json("""
     {
         "brightness": 1.0,
@@ -427,6 +429,7 @@ def es_ist_einmal():
 
 
 def mendelsohn():
+    # correct the color. No way this is right!
     apply_from_json("""
         {
         "brightness": 0.55,
