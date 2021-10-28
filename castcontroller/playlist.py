@@ -98,12 +98,10 @@ def willkommen():
     params = """
         {
         "brightness": 1.0,
-        "color_temp": 5830,
         "palette": 1634158357712,
         "primary_pattern": 141,
         "primary_scale": 1.0,
-        "primary_speed": 0.77,
-        "saturation": 1.0,
+        "primary_speed": 0.35,
         "secondary_pattern": 7,
         "secondary_scale": 0.51,
         "secondary_speed": 0.3
@@ -127,13 +125,11 @@ def zitti_zitti():
     params = """
      {
         "brightness": 1,
-        "color_temp": 6000,
         "palette": 1635281872064,
         "primary_pattern": 180,
         "primary_scale": 1.0,
         "primary_speed": 0.2,
-        "saturation": 1.0,
-        "secondary_pattern": 0,
+                "secondary_pattern": 0,
         "secondary_scale": 0.0,
         "secondary_speed": 0.33
     }"""
@@ -146,12 +142,10 @@ def norma1():
     params = """
     {
         "brightness": 0.6,
-        "color_temp": 6000,
         "palette": 1635282276093,
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.25,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": 0.0,
         "secondary_speed": 0.33
@@ -166,12 +160,10 @@ def norma2():
     params = """
     {
         "brightness": 0.6,
-        "color_temp": 6000,
         "palette": 1635282276093,
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 1,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": 0.0,
         "secondary_speed": 0.33
@@ -230,12 +222,10 @@ def a_beber():
     params = """
         {
         "brightness": 0.55,
-        "color_temp": 12000,
         "palette": 150,
         "primary_pattern": 140,
         "primary_scale": 3.03,
         "primary_speed": 0.06,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
@@ -248,12 +238,10 @@ def a_beber():
 def vilja1():
     apply_from_json("""{
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 1634906800552,
         "primary_pattern": 1635324171757,
         "primary_scale": 1.0,
         "primary_speed": 0.53,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": 0.51,
         "secondary_speed": 1.0
@@ -287,12 +275,10 @@ def belle_nuit():
     params = """
         {
         "brightness": 0.55,
-        "color_temp": 8000,
         "palette": 170,
         "primary_pattern": 140,
         "primary_scale": 3.03,
         "primary_speed": 0.06,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
@@ -305,12 +291,10 @@ def sempre_mobile():
     params = """
     {
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 1635283757687,
         "primary_pattern": 1635283894849,
         "primary_scale": 1.0,
         "primary_speed": 0.05,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": 0.0,
         "secondary_speed": 0.05
@@ -327,12 +311,10 @@ def fledermaus_brindisi():
     params = """
     {
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 1634906800552,
         "primary_pattern": 0,
         "primary_scale": 1.0,
         "primary_speed": 0.05,
-        "saturation": 1.0,
         "secondary_pattern": 8,
         "secondary_scale": -8.74,
         "secondary_speed": 1.24
@@ -352,12 +334,10 @@ def anvil():
     apply_from_json("""
     {
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 160,
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.25,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -0.09,
         "secondary_speed": 1.32
@@ -367,12 +347,10 @@ def anvil():
 def dont_stop_me():
     apply_from_json("""{
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 190,
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.25,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -0.09,
         "secondary_speed": 1.32
@@ -384,12 +362,10 @@ def ombra_mai_fu():
     # Backup:
     apply_from_json(""" {
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 1635285216783,
         "primary_pattern": 1635285209252,
         "primary_scale": 1.0,
         "primary_speed": 0.05,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -0.09,
         "secondary_speed": 1.32
@@ -406,12 +382,10 @@ def non_credea():
 def non_giunge():
     apply_from_json(""" {
         "brightness": 1,
-        "color_temp": 6000,
         "palette": 1635285809894,
         "primary_pattern": 1634079287296,
         "primary_scale": 1.0,
         "primary_speed": 0.56,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -0.09,
         "secondary_speed": 1.32
@@ -421,12 +395,10 @@ def non_giunge():
 def una_furtiva():
     apply_from_json(""" {
         "brightness": 1.0,
-        "color_temp": 6000,
         "palette": 1635285988457,
         "primary_pattern": 100,
         "primary_scale": -3.43,
         "primary_speed": 0.16,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -0.09,
         "secondary_speed": 1.32
@@ -438,12 +410,10 @@ def when_i_am_laid():
     apply_from_json("""
     {
         "brightness": 1,
-        "color_temp": 12000,
         "palette": 1634907211469,
         "primary_pattern": 1635286756259,
         "primary_scale": 1.0,
         "primary_speed": 0.27,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": 2.0,
         "secondary_speed": 0.59
@@ -455,12 +425,10 @@ def es_ist_einmal():
     apply_from_json("""
     {
         "brightness": 1.0,
-        "color_temp": 12000,
         "palette": 1635287289272,
         "primary_pattern": 120,
         "primary_scale": 1.0,
         "primary_speed": 0.28,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": 2.0,
         "secondary_speed": 0.59
@@ -472,12 +440,10 @@ def mendelsohn():
     apply_from_json("""
         {
         "brightness": 0.55,
-        "color_temp": 8000,
         "palette": 190,
         "primary_pattern": 180,
         "primary_scale": 0.0,
         "primary_speed": 0.22,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
@@ -488,12 +454,10 @@ def dimgh():
     apply_from_json("""
      {
         "brightness": 0.55,
-        "color_temp": 8000,
         "palette": 1634910211574,
         "primary_pattern": 180,
         "primary_scale": 0.0,
         "primary_speed": 0.22,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
@@ -504,12 +468,10 @@ def funiculi():
     apply_from_json("""
     {
         "brightness": 0.55,
-        "color_temp": 8000,
         "palette": 90,
         "primary_pattern": 170,
         "primary_scale": 6.75,
         "primary_speed": 0.03,
-        "saturation": 1.0,
         "secondary_pattern": 0,
         "secondary_scale": -5.4,
         "secondary_speed": 0.08
@@ -520,12 +482,10 @@ def heia():
     apply_from_json("""
     {
         "brightness": 1.0,
-        "color_temp": 5830,
         "palette": 190,
         "primary_pattern": 100,
         "primary_scale": -3.43,
         "primary_speed": 0.16,
-        "saturation": 1.0,
         "secondary_pattern": 8,
         "secondary_scale": 0.51,
         "secondary_speed": 0.77
@@ -536,12 +496,10 @@ def lippen_schweigen():
     apply_from_json("""
     {
         "brightness": 1.0,
-        "color_temp": 5830,
         "palette": 1634158357712,
         "primary_pattern": 141,
         "primary_scale": 1.0,
         "primary_speed": 0.15,
-        "saturation": 1.0,
         "secondary_pattern": 7,
         "secondary_scale": 0.51,
         "secondary_speed": 0.3 

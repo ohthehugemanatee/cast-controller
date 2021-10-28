@@ -17,9 +17,6 @@ class LEDPreset:
     secondary_scale: float = 0
     secondary_speed: float = 0.05
     brightness: float = 1.0
-    color_temp: int = 6000
-    saturation: float = 1.0
-
 
 class LEDs:
     currentSettings = {}
