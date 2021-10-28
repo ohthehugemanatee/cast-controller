@@ -1,6 +1,7 @@
 # Playlist for the show
 import sys
 import json
+import datetime
 from time import sleep
 from collections import deque
 from evdev import InputDevice, ecodes, categorize
@@ -55,10 +56,18 @@ def run_playlist(input_device):
             player.rotate(1)
     print("Starting from {}".format(player[0].__name__))
     player[0]()
+    # Double-click protection: require a minimum time between clicks.
+    time_limit = datetime.timedelta(seconds=0.5)
+    # Start with a dummy timestamp for last change
+    last_change_timestamp = now - datetime.timedelta(minutes=2)
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
+            now = datetime.datetime.now()
+            if (now - last_change_timestamp) < time_limit:
+                continue
             e = categorize(event)
             if e.keystate == e.key_up:
+                
                 if e.keycode == 'KEY_PAGEDOWN':
                     # Next
                     player.rotate(-1)
@@ -67,6 +76,7 @@ def run_playlist(input_device):
                     player.rotate(1)
                 save_position(player[0].__name__)
                 print("Executing {}".format(player[0].__name__))
+                last_change_timestamp = now
                 player[0]()
                 sys.stdout.flush()
 
