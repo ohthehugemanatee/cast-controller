@@ -54,7 +54,6 @@ def run_playlist(input_device):
         while player[0].__name__ != position:
             player.rotate(1)
     print("Starting from {}".format(player[0].__name__))
-    StageLights.apply(blackout)
     player[0]()
     for event in device.read_loop():
         if event.type == ecodes.EV_KEY:
@@ -68,7 +67,6 @@ def run_playlist(input_device):
                     player.rotate(1)
                 save_position(player[0].__name__)
                 print("Executing {}".format(player[0].__name__))
-                StageLights.apply(blackout)
                 player[0]()
                 sys.stdout.flush()
 
