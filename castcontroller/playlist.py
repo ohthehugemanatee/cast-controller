@@ -114,8 +114,7 @@ def zitti_zitti():
     StageLights.apply(LEDPreset(**params))
 
 
-def norma1():
-    # Check with bryn: timing of norma
+def norma():
     params = """
     {
         "brightness": 0.6,
@@ -128,27 +127,6 @@ def norma1():
     StageLights.apply(base)
 
 
-def norma2():
-    params = """
-    {
-        "brightness": 0.6,
-        "palette": 1635282276093,
-        "primary_pattern": 1635426570105
-        }"""
-    params = json.loads(params)
-    base = LEDPreset(**params)
-    StageLights.apply(base)
-    for i in range(30):
-        if base.brightness < 1:
-            brightness = base.brightness + 0.03
-            base.brightness = round(brightness, 3)
-            # Cap it to 1 otherwise the value wraps around.
-            if base.brightness > 1:
-                base.brightness = 1
-            StageLights.apply(base)
-        sleep(1)
-
-
 def ganz_ohne_weiber1():
     base = LEDPreset(
         palettes["Miami"],
@@ -156,23 +134,6 @@ def ganz_ohne_weiber1():
         brightness=0.3
     )
     StageLights.apply(base)
-
-
-def ganz_ohne_weiber2():
-    base = LEDPreset(
-        palettes["Miami"],
-        1635426783275,
-        brightness=0.3
-    )
-    for i in range(30):
-        if base.brightness < 1:
-            brightness = base.brightness + 0.03
-            base.brightness = round(brightness, 3)
-            # Cap it to 1 otherwise the value wraps around.
-            if base.brightness > 1:
-                base.brightness = 1
-            StageLights.apply(base)
-        sleep(1)
 
 
 def granada():
@@ -279,9 +240,10 @@ def anvil():
     {
         "brightness": 1.0,
         "palette": 160,
-        "primary_pattern": 141,
-        "primary_scale": 1.0,
-        "primary_speed": 0.25
+        "primary_pattern": 1635439528544,
+        "secondary_pattern": 12,
+        "secondary_speed": 0.38,
+        "secondary_scale": 0.97
         }""")
 
 
@@ -289,9 +251,8 @@ def dont_stop_me():
     apply_from_json("""{
         "brightness": 1.0,
         "palette": 190,
-        "primary_pattern": 141,
-        "primary_scale": 1.0,
-        "primary_speed": 0.25
+        "primary_pattern": 1635439603304,
+        "secondary_pattern": 0
         }""")
 
 
@@ -307,7 +268,7 @@ def ombra_mai_fu():
 def non_credea():
     base = LEDPreset(palettes["White"],
                      patterns["Static Color"],
-                     brightness=0.1)
+                     brightness=0.3)
     StageLights.apply(base)
 
 
@@ -315,9 +276,7 @@ def non_giunge():
     apply_from_json(""" {
         "brightness": 1,
         "palette": 1635285809894,
-        "primary_pattern": 1634079287296,
-        "primary_scale": 1.0,
-        "primary_speed": 0.56
+        "primary_pattern": 1634079287296
         }""")
 
 
@@ -335,7 +294,8 @@ def when_i_am_laid():
     apply_from_json("""
     {
         "palette": 1634907211469,
-        "primary_pattern": 1635286756259
+        "primary_pattern": 1635286756259,
+        "primary_speed": 0.25
         }""")
 
 
@@ -344,9 +304,7 @@ def es_ist_einmal():
     apply_from_json("""
     {
         "palette": 1635287289272,
-        "primary_pattern": 120,
-        "primary_scale": 1.0,
-        "primary_speed": 0.28
+        "primary_pattern": 1635440199649,
         }""")
 
 
@@ -356,9 +314,7 @@ def mendelsohn():
         {
         "brightness": 0.55,
         "palette": 190,
-        "primary_pattern": 180,
-        "primary_scale": 0.0,
-        "primary_speed": 0.22
+        "primary_pattern": 180
         }""")
 
 
@@ -421,11 +377,9 @@ PLAYLIST = (
     willkommen,  # Willkommen
     moderation,  # Eröffnungstext Anne und Till
     zitti_zitti,  # Zitti zitti  / Sempre mobile
-    norma1,  # Mira, o Norma cavatina
-    norma2,  # Mira, o Norma cabaletta
+    norma,  # Mira, o Norma cavatina
     moderation,  # Text Till
     ganz_ohne_weiber1,  # Ganz ohne Weiber recit
-    ganz_ohne_weiber2,  # Ganz ohne Weiber fun part
     granada,  # Granada
     moderation,  # Text Anne. Maybe remove the light cue it's so short
     a_beber,  # A beber
