@@ -211,7 +211,7 @@ def sempre_mobile():
     StageLights.apply(LEDPreset(**params))
 
 
-def fledermaus_brindisi():
+def chinese_traditional():
     # glimmering alternates slow and fast.
     # Wrong color. Should be in white.
     # second time through it eventually switched to white.
@@ -372,38 +372,42 @@ def apply_from_json(params):
     StageLights.apply(LEDPreset(**params))
 
 
+
 PLAYLIST = (
     start,
     willkommen,  # Willkommen
     moderation,  # Eröffnungstext Anne und Till
     zitti_zitti,  # Zitti zitti  / Sempre mobile
     norma,  # Mira, o Norma cavatina
-    moderation,  # Text Till
-    ganz_ohne_weiber1,  # Ganz ohne Weiber recit
     granada,  # Granada
     moderation,  # Text Anne. Maybe remove the light cue it's so short
-    a_beber,  # A beber
-    moderation,  # Text Sascha
+    belle_nuit,  # Belle nuit
+    moderation,  # Ukrainian text
+    norma,  # Ukrainian song reuses norma preset
+    moderation, # Anne short text 
+    mendelsohn,  # Mendelssohn Hochzeitsmarsch
+    moderation, # Sascha moderation
     vilja1,  # Viljalied opening (cue: njet njet njet)
     vilja2,  # Viljalied starting when she says NEIN.
-    belle_nuit,  # Belle nuit
-    sempre_mobile,  # Sempre mobile
-    fledermaus_brindisi,  # Fledermaus Brindisi
+    moderation, # Till moderation
+    ganz_ohne_weiber1,  # Ganz ohne Weiber recit
+    moderation, # Anne and Gui text
+    a_beber,  # A beber
     end,  # End of the first half
     anvil,  # Anvil coro
-    moderation,  # Text Anne . Something in here fucks up the speed.
+    moderation,  # Text Till
     dont_stop_me,  # Don't stop me now
     moderation,  # Text Anne
     ombra_mai_fu,  # Ombra mai fu
-    non_credea,  # Text CarrieAnne and ah non credea cavatina
-    non_giunge,  # Ah non giunge
-    moderation,  # Text Guillermo
+    moderation, # Text till and gui
     una_furtiva,  # Una furtiva lagrima
-    moderation,  # Short when I am laid moderation from Anne.
+    moderation,  # Interview anne and yu
+    chinese_traditional,  # Yu chinese traditional piece 
+    moderation,  # Short when I am laid moderation 
     when_i_am_laid,  # When I am laid
     es_ist_einmal,  # Es ist einmal im Leben so
-    moderation,  # Interview anne and yu
-    mendelsohn,  # Mendelssohn Hochzeitsmarsch
+    non_credea,  # Moderation CarrieAnne and ah non credea cavatina in one cue
+    non_giunge,  # Ah non giunge
     dimgh,  # Dein ist mein ganzes Herz
     funiculi,   # Funiculi
     heia,  # Heia
@@ -412,4 +416,3 @@ PLAYLIST = (
 
 )
 
-# @todo: don't forget to handle segfaults!
