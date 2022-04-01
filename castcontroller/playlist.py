@@ -213,16 +213,16 @@ def sempre_mobile():
 
 def chinese_traditional():
     # glimmering alternates slow and fast.
-    # Wrong color. Should be in white.
     # second time through it eventually switched to white.
     params = """
     {
-        "brightness": 1.0,
         "palette": 1634906800552,
-        "primary_pattern": 0,
-        "secondary_pattern": 8,
-        "secondary_scale": -8.74,
-        "secondary_speed": 1.24
+        "primary_pattern": 190,
+        "primary_scale": -9.31,
+        "primary_speed": 0.91,
+        "secondary_pattern": 0,
+        "secondary_speed": 1.24,
+        "secondary_scale": -8.74
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
@@ -276,7 +276,8 @@ def non_giunge():
     apply_from_json(""" {
         "brightness": 1,
         "palette": 1635285809894,
-        "primary_pattern": 1634079287296
+        "primary_pattern": 1634079287296,
+        "primary_speed": 0.27
         }""")
 
 
