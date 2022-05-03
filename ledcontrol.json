@@ -1,0 +1,713 @@
+{
+    "palettes": {
+        "1634158357712": {
+            "colors": [
+                [
+                    0.20147054335650275,
+                    0.6759672959645591,
+                    0.5190714667825138
+                ],
+                [
+                    0.1484375,
+                    0.9960014330660517,
+                    1
+                ],
+                [
+                    0.16127462948069854,
+                    0.9989702237825372,
+                    0.9710783116957721
+                ]
+            ],
+            "mode": 0,
+            "name": "Golden Hour (Wilkommen)"
+        },
+        "1634906308907": {
+            "colors": [
+                [
+                    0.8558823080623851,
+                    0.9848970810390446,
+                    0.971323574290556
+                ],
+                [
+                    0.843137404497932,
+                    0.9940503991168478,
+                    0.344362595502068
+                ],
+                [
+                    0.867156982421875,
+                    0.5958810627324085,
+                    0.706372429342831
+                ]
+            ],
+            "mode": 0,
+            "name": "Lucia mad scene"
+        },
+        "1634906800552": {
+            "colors": [
+                [
+                    0.5824908088235294,
+                    0,
+                    0.9750000448787914
+                ],
+                [
+                    0.5659466911764706,
+                    0,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Vilja intro"
+        },
+        "1634907211469": {
+            "colors": [
+                [
+                    1,
+                    0.9989702237825372,
+                    0.6808823978199677
+                ],
+                [
+                    1,
+                    0.9989702237825372,
+                    0.5833331837373621
+                ],
+                [
+                    1,
+                    0.5798627560962528,
+                    0.3681371352251838
+                ]
+            ],
+            "mode": 0,
+            "name": "When I am laid"
+        },
+        "1634910211574": {
+            "colors": [
+                [
+                    0.9147058374741499,
+                    0.8247140146774885,
+                    1
+                ],
+                [
+                    0.9338235294117647,
+                    0.8727831807780321,
+                    1
+                ],
+                [
+                    0.9542738970588235,
+                    0.7240417620137299,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "DIMGH"
+        },
+        "1635281872064": {
+            "colors": [
+                [
+                    0.979549632352941,
+                    0.47459959820151604,
+                    0.43088239781996784
+                ],
+                [
+                    0.07475505155675552,
+                    0.7308925043800057,
+                    0.5134802425608915
+                ],
+                [
+                    0.15392168830422795,
+                    0.6439359826408753,
+                    0.632843017578125
+                ]
+            ],
+            "mode": 0,
+            "name": "Zitti Zitti"
+        },
+        "1635282276093": {
+            "colors": [
+                [
+                    0.7456341911764706,
+                    0.9969995733712004,
+                    1
+                ],
+                [
+                    0.7549021103802848,
+                    0.9208238544944222,
+                    0.8627449484432446
+                ],
+                [
+                    0.7127452177159928,
+                    0.590709724002989,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Norma"
+        },
+        "1635283757687": {
+            "colors": [
+                [
+                    0.6683825324563419,
+                    0.9989702237825372,
+                    1
+                ],
+                [
+                    0,
+                    0.9989702237825372,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Sempre Mobile"
+        },
+        "1635285216783": {
+            "colors": [
+                [
+                    0.7456341911764706,
+                    0.819958258648308,
+                    0.7641700295840992
+                ],
+                [
+                    0,
+                    0.996970998619425,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Ombra mai fu"
+        },
+        "1635285809894": {
+            "colors": [
+                [
+                    0,
+                    0.9989988558352403,
+                    1
+                ],
+                [
+                    0.04549632352941176,
+                    0.9989988558352403,
+                    1
+                ],
+                [
+                    0.11,
+                    0.9989988558352403,
+                    1
+                ],
+                [
+                    0.08639705882352941,
+                    0,
+                    0.4358913197236902
+                ],
+                [
+                    0,
+                    0,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Ah non giunge"
+        },
+        "1635285988457": {
+            "colors": [
+                [
+                    0.5397058374741498,
+                    0,
+                    0.9577966577866498
+                ],
+                [
+                    0.7549021103802848,
+                    0.36530966337035303,
+                    1
+                ],
+                [
+                    0.5803922765395221,
+                    0.7675057766912186,
+                    0.9710783116957721
+                ]
+            ],
+            "mode": 0,
+            "name": "Una furtiva"
+        },
+        "1635287289272": {
+            "colors": [
+                [
+                    0.04476190476190478,
+                    0.8041190490024313,
+                    0.9566174675436581
+                ],
+                [
+                    0.9276962280273438,
+                    0.9597254563250857,
+                    0.9914214190314797
+                ]
+            ],
+            "mode": 0,
+            "name": "Es ist einmal"
+        },
+        "1635288341192": {
+            "colors": [
+                [
+                    0.20147054335650275,
+                    0.034243908058218406,
+                    1
+                ],
+                [
+                    0.1484375,
+                    0.15215774458281847,
+                    0.41291337854721966
+                ],
+                [
+                    0.5833333333333334,
+                    0.8933639002610125,
+                    1
+                ],
+                [
+                    0.16127462948069854,
+                    0.9027246293567476,
+                    0.786381441004136
+                ],
+                [
+                    0.6825213712804458,
+                    1,
+                    0.7782619700712317
+                ],
+                [
+                    0.16127462948069854,
+                    0.9989702237825372,
+                    0.9710783116957721
+                ]
+            ],
+            "mode": 0,
+            "name": "Heia"
+        },
+        "1635288368342": {
+            "colors": [
+                [
+                    0.5824908088235294,
+                    0.8936543691725958,
+                    0.810737834257238
+                ],
+                [
+                    0.5808823529411765,
+                    0.8415001395608293,
+                    1
+                ],
+                [
+                    0.5659466911764706,
+                    0.9072598113494665,
+                    0.752833646886489
+                ]
+            ],
+            "mode": 0,
+            "name": "Sky Blue (Copy)"
+        },
+        "1635333252565": {
+            "colors": [
+                [
+                    0.5824908088235294,
+                    0,
+                    0
+                ],
+                [
+                    0.5659466911764706,
+                    0,
+                    0
+                ]
+            ],
+            "mode": 0,
+            "name": "Blackout"
+        },
+        "1648996479752": {
+            "colors": [
+                [
+                    0.5397058374741498,
+                    0,
+                    0.9577966577866498
+                ],
+                [
+                    0.7549021103802848,
+                    0.36530966337035303,
+                    1
+                ],
+                [
+                    0.5803922765395221,
+                    0.7675057766912186,
+                    0.9710783116957721
+                ]
+            ],
+            "mode": 0,
+            "name": "Una furtiva (Copy)"
+        },
+        "1648996480978": {
+            "colors": [
+                [
+                    0.2652418473187615,
+                    0,
+                    1
+                ],
+                [
+                    0.0233612060546875,
+                    0.7564661259553871,
+                    0.16781526453354773
+                ],
+                [
+                    0.5803922765395221,
+                    0.7938810919417816,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Una furtiva (Copy) (Copy)"
+        },
+        "1651585677657": {
+            "colors": [
+                [
+                    0.16470606186810663,
+                    0.8681922755470538,
+                    1
+                ],
+                [
+                    0.16299034567440257,
+                    0.9620137858445365,
+                    0.9178920072667739
+                ]
+            ],
+            "mode": 0,
+            "name": "Fledermaus_brindisi"
+        }
+    },
+    "params": {
+        "brightness": 1.0,
+        "color_temp": 9040,
+        "gamma": 1.0,
+        "palette": 1651585677657,
+        "primary_pattern": 0,
+        "primary_scale": -4.62,
+        "primary_speed": 1.75,
+        "sacn": 0,
+        "saturation": 0.85,
+        "secondary_pattern": 8,
+        "secondary_scale": -8.74,
+        "secondary_speed": 1.24
+    },
+    "patterns": {
+        "0": {
+            "primary_scale": -4.62,
+            "primary_speed": 1.75
+        },
+        "1": {
+            "primary_scale": 0.0,
+            "primary_speed": 0.99
+        },
+        "2": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.1
+        },
+        "10": {
+            "primary_scale": 4.89,
+            "primary_speed": 0.2
+        },
+        "20": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "30": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.1
+        },
+        "31": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.1
+        },
+        "40": {
+            "primary_scale": 2.77,
+            "primary_speed": 0.25
+        },
+        "50": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "100": {
+            "primary_scale": -3.43,
+            "primary_speed": 0.16
+        },
+        "110": {
+            "primary_scale": 0.69,
+            "primary_speed": 0.33
+        },
+        "120": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.28
+        },
+        "130": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.82
+        },
+        "140": {
+            "primary_scale": 3.03,
+            "primary_speed": 0.06
+        },
+        "141": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.15
+        },
+        "150": {
+            "primary_scale": 10.0,
+            "primary_speed": 0.31
+        },
+        "160": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.11
+        },
+        "161": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.32
+        },
+        "170": {
+            "primary_scale": 6.75,
+            "primary_speed": 0.03
+        },
+        "180": {
+            "primary_scale": 0.0,
+            "primary_speed": 0.22
+        },
+        "190": {
+            "primary_scale": -9.31,
+            "primary_speed": 0.91
+        },
+        "200": {
+            "primary_scale": 0.18,
+            "primary_speed": 0.57
+        },
+        "300": {
+            "primary_scale": 8.67,
+            "primary_speed": 0.06
+        },
+        "310": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "320": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "330": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "340": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "350": {
+            "primary_scale": 1.0,
+            "primary_speed": 0.2
+        },
+        "360": {
+            "primary_scale": 1.02,
+            "primary_speed": 0.2
+        },
+        "1633036792965": {
+            "name": "fade-out",
+            "primary_scale": -8.25,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    if prev_state[2] <= 0.1:\n        return (0,0,0), hsv\n    val = prev_state[2] - 0.005\n    return (prev_state[0], prev_state[1], val), hsv"
+        },
+        "1633213463693": {
+            "name": "wipe-in",
+            "primary_scale": -9.89,
+            "primary_speed": 0.18,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    target = palette(0)\n    val = prev_state[2]\n    if val > target[2] - 0.2:\n        return target, hsv\n    val = ((t + x) % 1 > 0.99) * 0.9\n    return (target[0], target[1], val), hsv"
+        },
+        "1633213622116": {
+            "name": "fade-in",
+            "primary_scale": 8.45,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    target = palette(0)\n    if prev_state[2] >= target[2] - 0.1:\n        return target, hsv\n    val = prev_state[2] + 0.005\n    return (target[0], target[1], val), hsv"
+        },
+        "1633810111569": {
+            "name": "wipe-out",
+            "primary_scale": 1.0,
+            "primary_speed": 0.2,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    target = (0,0,0)\n    val = prev_state[2]\n    if val < target[2] + 0.1:\n        return target, hsv\n    val = ((t + x) % 1 < 0.99) / 0.9\n    return (prev_state[0], prev_state[1], val), hsv"
+        },
+        "1633910057112": {
+            "name": "Blackout",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return (0,0,0), hsv"
+        },
+        "1634079287296": {
+            "name": "Blackbody pulse from center",
+            "primary_scale": 1.0,
+            "primary_speed": 0.27,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = wave_triangle(t + x)\n    if x > 0.5:\n        v = wave_triangle(t - x)\n    c = blackbody_to_rgb(v * v * 5500 + 1000)\n    return (c[0] * v, c[1] * v, c[2] * v), rgb"
+        },
+        "1634080813116": {
+            "name": "wipe from center",
+            "primary_scale": 1.0,
+            "primary_speed": 0.18,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    target = palette(0)\n    val = prev_state[2]\n    if val > target[2] - 0.2:\n        return target, hsv\n    val = ((t + x) % 1 > 0.99) * 0.9\n    if x > 0.5:\n        val = ((t - x) % 1 > 0.99) * 0.9\n    return (target[0], target[1], val), hsv"
+        },
+        "1634154817639": {
+            "name": "Palette Perlin Noise 2D (Copy)",
+            "primary_scale": 1.0,
+            "primary_speed": 0.6,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    if t==0:\n        return (0,0,0), hsv\n    return palette(perlin_noise_3d(x, y, t)), hsv"
+        },
+        "1634837139829": {
+            "name": "Middle only",
+            "primary_scale": 1.0,
+            "primary_speed": 0.2,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    if x > 0.49 and x < 0.51:\n        return palette(0), hsv\n    return (0, 0, 0), hsv"
+        },
+        "1635283894849": {
+            "name": "Sempre mobile",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    if x < 0.5:\n        return palette(0), hsv\n    return palette(1), hsv"
+        },
+        "1635285209252": {
+            "name": "Ombra mai fu",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    if t < 0.5:\n        return palette(0), hsv\n    if t > 0.9:\n        return palette(1), hsv\n    return palette(t)"
+        },
+        "1635286756259": {
+            "name": "When I am laid",
+            "primary_scale": -1.53,
+            "primary_speed": 0.25,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    pal = palette(0)\n    brightness = wave_sine(t) * 0.7\n    return (pal[0], pal[1], 0.3 + brightness), hsv"
+        },
+        "1635324171757": {
+            "name": "Vilja white",
+            "primary_scale": 1.0,
+            "primary_speed": 0.53,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    pal = palette(0)\n    if x < 0.666 and x > 0.333:\n        return (pal[0], pal[1], 0), hsv\n    return pal, hsv"
+        },
+        "1635424711645": {
+            "name": "Norma",
+            "primary_scale": 1.0,
+            "primary_speed": 0.25,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        },
+        "1635425247769": {
+            "name": "Wilkommen",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        },
+        "1635425452181": {
+            "name": "Moderation",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines(x, y, t, 1.0, 0.5, 0.5, 1.0)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1635426084409": {
+            "name": "Zitti zitti",
+            "primary_scale": 1.0,
+            "primary_speed": 0.2,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines_octave(x, y, t, 7, 2.0, 0.5)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1635426495476": {
+            "name": "Norma1",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        },
+        "1635426570105": {
+            "name": "Norma2",
+            "primary_scale": 1.0,
+            "primary_speed": 0.38,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        },
+        "1635426637210": {
+            "name": "Ganz ohne weiber",
+            "primary_scale": -7.26,
+            "primary_speed": 0.24,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines(x, y, t, 1.0, 0.5, 0.5, 1.0)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1635426783275": {
+            "name": "Ganz ohne weiber 2",
+            "primary_scale": 1.0,
+            "primary_speed": 0.4,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines(x, y, t, 1.0, 0.5, 0.5, 1.0)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1635426908951": {
+            "name": "Granada",
+            "primary_scale": 0.8,
+            "primary_speed": 0.19,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines_octave(x, y, t, 7, 2.0, 0.5)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1635427041369": {
+            "name": "A beber",
+            "primary_scale": 0.41,
+            "primary_speed": 0.45,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_triangle(t) + x), hsv"
+        },
+        "1635427181230": {
+            "name": "Vilja2",
+            "primary_scale": 3.03,
+            "primary_speed": 0.99,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette(x), hsv"
+        },
+        "1635427261230": {
+            "name": "Belle Nuit",
+            "primary_scale": 3.03,
+            "primary_speed": 0.06,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_triangle(t) + x), hsv"
+        },
+        "1635439528544": {
+            "name": "Anvil coro",
+            "primary_scale": 1.0,
+            "primary_speed": 1.98,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        },
+        "1635439603304": {
+            "name": "Dont stop me now",
+            "primary_scale": 1.0,
+            "primary_speed": 0.25,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        },
+        "1635440199649": {
+            "name": "Es ist einmal",
+            "primary_scale": 1.0,
+            "primary_speed": 0.05,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(x), hsv"
+        },
+        "1648996309070": {
+            "name": "Ganz ohne weiber (Copy)",
+            "primary_scale": 1.68,
+            "primary_speed": 0.24,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines(x, y, t, 1.0, 0.5, 0.5, 1.0)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1648996311171": {
+            "name": "Ganz ohne weiber (Copy) (Copy)",
+            "primary_scale": -7.26,
+            "primary_speed": 0.2,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines(x, y, t, 1.0, 0.5, 0.5, 1.0)\n    return palette(wave_triangle(v)), hsv"
+        },
+        "1648996595588": {
+            "name": "A beber (Copy)",
+            "primary_scale": 0.41,
+            "primary_speed": 1.06,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_triangle(t) + x), hsv"
+        },
+        "1648996598311": {
+            "name": "A beber (Copy) (Copy)",
+            "primary_scale": 0.41,
+            "primary_speed": 1.06,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_triangle(t) + x), hsv"
+        },
+        "1648996601044": {
+            "name": "A beber (Copy) (Copy) (Copy)",
+            "primary_scale": 0.41,
+            "primary_speed": 1.06,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_triangle(t) + x), hsv"
+        },
+        "1649001618229": {
+            "name": "Palette Bounce Mirrored 1D (Copy)",
+            "primary_scale": 5.35,
+            "primary_speed": 0.11,
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
+        }
+    }
+}
