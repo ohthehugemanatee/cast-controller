@@ -218,7 +218,7 @@ def chinese_traditional():
     # second time through it eventually switched to white.
     params = """
     {
-        "palette": 1651586775131,
+        "palette": 1651586939251,
         "primary_pattern": 1,
         "primary_scale": 1,
         "primary_speed": 0.91,
