@@ -222,7 +222,9 @@ def chinese_traditional():
         "primary_pattern": 1,
         "primary_scale": 1,
         "primary_speed": 0.91,
-        "secondary_pattern": 0
+        "secondary_pattern": 0,
+        "secondary_speed": 1,
+        "secondary_scale": 1
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
