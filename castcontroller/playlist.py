@@ -367,6 +367,22 @@ def lippen_schweigen():
         "secondary_speed": 0.3 
     }""")
 
+def fledermaus_brindisi():
+    # glimmering alternates slow and fast.
+    # Wrong color. Should be in white.
+    # second time through it eventually switched to white.
+    params = """
+    {
+        "brightness": 1.0,
+        "palette": 1634906800552,
+        "primary_pattern": 0,
+        "secondary_pattern": 8,
+        "secondary_scale": -8.74,
+        "secondary_speed": 1.24
+    }"""
+    params = json.loads(params)
+    StageLights.apply(LEDPreset(**params))
+
 
 def apply_from_json(params):
     params = json.loads(params)
@@ -380,38 +396,37 @@ PLAYLIST = (
     moderation,  # Eröffnungstext Anne und Till
     zitti_zitti,  # Zitti zitti  / Sempre mobile
     norma,  # Mira, o Norma cavatina
+    moderation,
+    ganz_ohne_weiber1,  # Ganz ohne Weiber recit
     granada,  # Granada
-    moderation,  # Text Anne. Maybe remove the light cue it's so short
-    belle_nuit,  # Belle nuit
-    moderation,  # Ukrainian text
-    norma,  # Ukrainian song reuses norma preset
-    moderation, # Anne short text 
-    mendelsohn,  # Mendelssohn Hochzeitsmarsch
+    moderation, # Anne and Gui text
+    a_beber,  # A beber
     moderation, # Sascha moderation
     vilja1,  # Viljalied opening (cue: njet njet njet)
     vilja2,  # Viljalied starting when she says NEIN.
-    moderation, # Till moderation
-    ganz_ohne_weiber1,  # Ganz ohne Weiber recit
-    moderation, # Anne and Gui text
-    a_beber,  # A beber
-    end,  # End of the first half
+    moderation,  # Text but we don't know from whom.
+    belle_nuit,  # Belle nuit
+    moderation,
+    fledermaus_brindisi, # Yu solo AND fledermaus brindisi right after.
+    end, # end of the first half.
+
     anvil,  # Anvil coro
     moderation,  # Text Till
     dont_stop_me,  # Don't stop me now
     moderation,  # Text Anne
     ombra_mai_fu,  # Ombra mai fu
-    moderation, # Text till and gui
+    non_credea,  # Moderation CarrieAnne and ah non credea cavatina in one cue
+    non_giunge,  # Ah non giunge
+    moderation,
     una_furtiva,  # Una furtiva lagrima
-    moderation,  # Interview anne and yu
-    chinese_traditional,  # Yu chinese traditional piece 
     moderation,  # Short when I am laid moderation 
     when_i_am_laid,  # When I am laid
     es_ist_einmal,  # Es ist einmal im Leben so
-    non_credea,  # Moderation CarrieAnne and ah non credea cavatina in one cue
-    non_giunge,  # Ah non giunge
+    moderation,  # Interview anne and yu
+    chinese_traditional,  # Yu chinese traditional piece 
+    heia,  # Heia
     dimgh,  # Dein ist mein ganzes Herz
     funiculi,   # Funiculi
-    heia,  # Heia
     lippen_schweigen,  # Lippen schweigen
     end
 
