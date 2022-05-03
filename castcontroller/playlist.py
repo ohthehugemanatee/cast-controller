@@ -139,7 +139,8 @@ def ganz_ohne_weiber1():
 def granada():
     StageLights.apply(LEDPreset(
         palettes["Golden Hour"],
-        1635426908951
+        1635426908951,
+        primary_speed=0.19
     ))
 
 
@@ -148,7 +149,8 @@ def a_beber():
         {
         "brightness": 0.55,
         "palette": 150,
-        "primary_pattern": 1635427041369
+        "primary_pattern": 1635427041369,
+        "primary_speed": 0.45
         }
     """
     params = json.loads(params)
@@ -216,13 +218,11 @@ def chinese_traditional():
     # second time through it eventually switched to white.
     params = """
     {
-        "palette": 1634906800552,
-        "primary_pattern": 190,
-        "primary_scale": -9.31,
+        "palette": 1651586775131,
+        "primary_pattern": 1,
+        "primary_scale": 1,
         "primary_speed": 0.91,
-        "secondary_pattern": 0,
-        "secondary_speed": 1.24,
-        "secondary_scale": -8.74
+        "secondary_pattern": 0
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
@@ -240,6 +240,7 @@ def anvil():
     {
         "brightness": 1.0,
         "palette": 160,
+        "primary_speed": 0.35,
         "primary_pattern": 1635439528544,
         "secondary_pattern": 12,
         "secondary_speed": 0.38,
@@ -251,8 +252,8 @@ def dont_stop_me():
     apply_from_json("""{
         "brightness": 1.0,
         "palette": 190,
-        "primary_pattern": 1635439603304,
         "secondary_pattern": 0
+        "primary_pattern": 1635439603304,
         }""")
 
 
@@ -284,7 +285,7 @@ def non_giunge():
 def una_furtiva():
     apply_from_json(""" {
         "palette": 1635285988457,
-        "primary_pattern": 100,
+        "primary_pattern": 1,
         "primary_scale": -3.43,
         "primary_speed": 0.16
         }""")
@@ -349,9 +350,7 @@ def heia():
         "primary_pattern": 100,
         "primary_scale": -3.43,
         "primary_speed": 0.16,
-        "secondary_pattern": 8,
-        "secondary_scale": 0.51,
-        "secondary_speed": 0.77
+        "secondary_pattern": 0,
     }""")
 
 
@@ -374,7 +373,7 @@ def fledermaus_brindisi():
     params = """
     {
         "brightness": 1.0,
-        "palette": 1634906800552,
+        "palette": 1651585677657,
         "primary_pattern": 0,
         "secondary_pattern": 8,
         "secondary_scale": -8.74,
