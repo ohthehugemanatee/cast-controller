@@ -240,7 +240,7 @@ def anvil():
     {
         "brightness": 1.0,
         "palette": 160,
-        "primary_speed": 0.35,
+        "primary_speed": 0.25,
         "primary_pattern": 1635439528544,
         "secondary_pattern": 12,
         "secondary_speed": 0.38,
@@ -252,8 +252,8 @@ def dont_stop_me():
     apply_from_json("""{
         "brightness": 1.0,
         "palette": 190,
-        "secondary_pattern": 0
-        "primary_pattern": 1635439603304,
+        "secondary_pattern": 0,
+        "primary_pattern": 1635439603304
         }""")
 
 
@@ -375,9 +375,9 @@ def fledermaus_brindisi():
         "brightness": 1.0,
         "palette": 1651585677657,
         "primary_pattern": 0,
-        "secondary_pattern": 8,
-        "secondary_scale": -8.74,
-        "secondary_speed": 1.24
+        "secondary_pattern": 1,
+        "secondary_speed": 0.93
+        "secondary_scale": 0.04,
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
