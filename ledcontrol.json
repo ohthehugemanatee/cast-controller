@@ -376,18 +376,18 @@
         "1651586939251": {
             "colors": [
                 [
-                    0.5824908088235294,
-                    0.8762614416475973,
+                    0.8705881904153263,
+                    0.875359088454709,
                     1
                 ],
                 [
-                    0.5808823529411765,
-                    0.8132866132723112,
+                    0.7732844633214615,
+                    0.8124491100599827,
                     1
                 ],
                 [
-                    0.5659466911764706,
-                    0.5821653318077803,
+                    0.6465687471277574,
+                    0.5815658317944534,
                     1
                 ]
             ],
@@ -399,15 +399,15 @@
         "brightness": 1.0,
         "color_temp": 9040,
         "gamma": 1.0,
-        "palette": 1634158357712,
-        "primary_pattern": 141,
+        "palette": 1651586939251,
+        "primary_pattern": 1,
         "primary_scale": 1.0,
-        "primary_speed": 0.15,
+        "primary_speed": 0.91,
         "sacn": 0,
         "saturation": 0.85,
-        "secondary_pattern": 7,
-        "secondary_scale": 0.51,
-        "secondary_speed": 0.3
+        "secondary_pattern": 0,
+        "secondary_scale": 1.0,
+        "secondary_speed": 1.0
     },
     "patterns": {
         "0": {
@@ -415,8 +415,8 @@
             "primary_speed": 1.75
         },
         "1": {
-            "primary_scale": 0.0,
-            "primary_speed": 0.99
+            "primary_scale": 1.0,
+            "primary_speed": 0.91
         },
         "2": {
             "primary_scale": 1.0,
@@ -468,7 +468,7 @@
         },
         "141": {
             "primary_scale": 1.0,
-            "primary_speed": 0.15
+            "primary_speed": 0.05
         },
         "150": {
             "primary_scale": 10.0,
@@ -529,7 +529,7 @@
         "1633036792965": {
             "name": "fade-out",
             "primary_scale": -8.25,
-            "primary_speed": 0.05,
+            "primary_speed": 0.15,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    if prev_state[2] <= 0.1:\n        return (0,0,0), hsv\n    val = prev_state[2] - 0.005\n    return (prev_state[0], prev_state[1], val), hsv"
         },
         "1633213463693": {
@@ -679,7 +679,7 @@
         "1635439528544": {
             "name": "Anvil coro",
             "primary_scale": 1.0,
-            "primary_speed": 0.36,
+            "primary_speed": 0.25,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
         },
         "1635439603304": {
@@ -691,7 +691,7 @@
         "1635440199649": {
             "name": "Es ist einmal",
             "primary_scale": 1.0,
-            "primary_speed": 0.35,
+            "primary_speed": 0.05,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(x), hsv"
         },
         "1648996309070": {
