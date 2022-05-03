@@ -232,6 +232,7 @@ def chinese_traditional():
 
 def end():
     StageLights.apply(LEDPreset(
+        palette=StageLights.currentSettings.get("palette"),
         primary_pattern=patterns["Fade out"]
     ))
 
