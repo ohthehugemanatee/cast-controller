@@ -376,8 +376,8 @@ def fledermaus_brindisi():
         "palette": 1651585677657,
         "primary_pattern": 0,
         "secondary_pattern": 1,
-        "secondary_speed": 0.93
-        "secondary_scale": 0.04,
+        "secondary_speed": 0.93,
+        "secondary_scale": 0.04
     }"""
     params = json.loads(params)
     StageLights.apply(LEDPreset(**params))
