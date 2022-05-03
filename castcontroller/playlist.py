@@ -352,7 +352,7 @@ def heia():
         "primary_pattern": 100,
         "primary_scale": -3.43,
         "primary_speed": 0.16,
-        "secondary_pattern": 0,
+        "secondary_pattern": 0
     }""")
 
 
