@@ -209,18 +209,18 @@
             "colors": [
                 [
                     0.5397058374741498,
-                    0,
-                    0.9577966577866498
+                    0.4196796897346967,
+                    0.9970588684082031
                 ],
                 [
                     0.7549021103802848,
-                    0.36530966337035303,
-                    1
+                    0.6530893007186784,
+                    0.7487743602079503
                 ],
                 [
                     0.5803922765395221,
-                    0.7675057766912186,
-                    0.9710783116957721
+                    0.9665904448834383,
+                    1
                 ]
             ],
             "mode": 0,
@@ -229,14 +229,14 @@
         "1635287289272": {
             "colors": [
                 [
-                    0.04476190476190478,
-                    0.8041190490024313,
-                    0.9566174675436581
+                    0.8264707677504595,
+                    0.4608696210848112,
+                    0.9161762910730699
                 ],
                 [
-                    0.9276962280273438,
-                    0.9597254563250857,
-                    0.9914214190314797
+                    0.905637404497932,
+                    0.9989702237825372,
+                    0.8002449484432446
                 ]
             ],
             "mode": 0,
@@ -372,21 +372,42 @@
             ],
             "mode": 0,
             "name": "Fledermaus_brindisi"
+        },
+        "1651586939251": {
+            "colors": [
+                [
+                    0.5824908088235294,
+                    0.8762614416475973,
+                    1
+                ],
+                [
+                    0.5808823529411765,
+                    0.8132866132723112,
+                    1
+                ],
+                [
+                    0.5659466911764706,
+                    0.5821653318077803,
+                    1
+                ]
+            ],
+            "mode": 0,
+            "name": "Yu chinese traditional"
         }
     },
     "params": {
         "brightness": 1.0,
         "color_temp": 9040,
         "gamma": 1.0,
-        "palette": 1651585677657,
-        "primary_pattern": 0,
-        "primary_scale": -4.62,
-        "primary_speed": 1.75,
+        "palette": 1634158357712,
+        "primary_pattern": 141,
+        "primary_scale": 1.0,
+        "primary_speed": 0.15,
         "sacn": 0,
         "saturation": 0.85,
-        "secondary_pattern": 8,
-        "secondary_scale": -8.74,
-        "secondary_speed": 1.24
+        "secondary_pattern": 7,
+        "secondary_scale": 0.51,
+        "secondary_speed": 0.3
     },
     "patterns": {
         "0": {
@@ -658,7 +679,7 @@
         "1635439528544": {
             "name": "Anvil coro",
             "primary_scale": 1.0,
-            "primary_speed": 1.98,
+            "primary_speed": 0.36,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
         },
         "1635439603304": {
@@ -670,7 +691,7 @@
         "1635440199649": {
             "name": "Es ist einmal",
             "primary_scale": 1.0,
-            "primary_speed": 0.05,
+            "primary_speed": 0.35,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(x), hsv"
         },
         "1648996309070": {
