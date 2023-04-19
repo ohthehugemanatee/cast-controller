@@ -399,10 +399,10 @@
         "brightness": 1.0,
         "color_temp": 9040,
         "gamma": 1.0,
-        "palette": 1635333252565,
-        "primary_pattern": 1633910057112,
+        "palette": 1634906800552,
+        "primary_pattern": 1635324171757,
         "primary_scale": 1.0,
-        "primary_speed": 0.05,
+        "primary_speed": 0.53,
         "sacn": 0,
         "saturation": 0.85,
         "secondary_pattern": 0,
@@ -468,7 +468,7 @@
         },
         "141": {
             "primary_scale": 1.0,
-            "primary_speed": 0.15
+            "primary_speed": 0.05
         },
         "150": {
             "primary_scale": 10.0,
@@ -602,7 +602,7 @@
             "name": "Vilja white",
             "primary_scale": 1.0,
             "primary_speed": 0.53,
-            "source": "def pattern(t, dt, x, y, z, prev_state):\n    pal = palette(0)\n    if x < 0.666 and x > 0.333:\n        return (pal[0], pal[1], 0), hsv\n    return pal, hsv"
+            "source": "def pattern(t, dt, x, y, z, prev_state):\n    pal = palette(0)\n    if x < 0.75 and x > 0.249:\n        return (pal[0], pal[1], 0), hsv\n    return pal, hsv"
         },
         "1635424711645": {
             "name": "Norma",
