@@ -303,13 +303,13 @@
             "colors": [
                 [
                     0.5824908088235294,
-                    0,
-                    0
+                    0.06032100988894093,
+                    0.26417002958409924
                 ],
                 [
                     0.5659466911764706,
-                    0,
-                    0
+                    0.7814094712134121,
+                    0.2952665441176471
                 ]
             ],
             "mode": 0,
@@ -319,8 +319,8 @@
             "colors": [
                 [
                     0.5397058374741498,
-                    0,
-                    0.9577966577866498
+                    0.5161033487644325,
+                    0.661228853113511
                 ],
                 [
                     0.7549021103802848,
@@ -399,23 +399,23 @@
         "brightness": 1.0,
         "color_temp": 9040,
         "gamma": 1.0,
-        "palette": 1651586939251,
-        "primary_pattern": 1,
+        "palette": 1635333252565,
+        "primary_pattern": 1633910057112,
         "primary_scale": 1.0,
-        "primary_speed": 0.91,
+        "primary_speed": 0.05,
         "sacn": 0,
         "saturation": 0.85,
         "secondary_pattern": 0,
-        "secondary_scale": 1.0,
-        "secondary_speed": 1.0
+        "secondary_scale": 0.0,
+        "secondary_speed": 0.05
     },
     "patterns": {
         "0": {
-            "primary_scale": -4.62,
-            "primary_speed": 1.75
+            "primary_scale": 1.0,
+            "primary_speed": 0.05
         },
         "1": {
-            "primary_scale": 1.0,
+            "primary_scale": -3.43,
             "primary_speed": 0.91
         },
         "2": {
@@ -468,7 +468,7 @@
         },
         "141": {
             "primary_scale": 1.0,
-            "primary_speed": 0.05
+            "primary_speed": 0.15
         },
         "150": {
             "primary_scale": 10.0,
@@ -529,7 +529,7 @@
         "1633036792965": {
             "name": "fade-out",
             "primary_scale": -8.25,
-            "primary_speed": 0.15,
+            "primary_speed": 0.05,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    if prev_state[2] <= 0.1:\n        return (0,0,0), hsv\n    val = prev_state[2] - 0.005\n    return (prev_state[0], prev_state[1], val), hsv"
         },
         "1633213463693": {
@@ -583,7 +583,7 @@
         "1635283894849": {
             "name": "Sempre mobile",
             "primary_scale": 1.0,
-            "primary_speed": 0.05,
+            "primary_speed": 0.74,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    if x < 0.5:\n        return palette(0), hsv\n    return palette(1), hsv"
         },
         "1635285209252": {
@@ -624,8 +624,8 @@
         },
         "1635426084409": {
             "name": "Zitti zitti",
-            "primary_scale": 1.0,
-            "primary_speed": 0.2,
+            "primary_scale": 1.49,
+            "primary_speed": 0.45,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines_octave(x, y, t, 7, 2.0, 0.5)\n    return palette(wave_triangle(v)), hsv"
         },
         "1635426495476": {
@@ -642,8 +642,8 @@
         },
         "1635426637210": {
             "name": "Ganz ohne weiber",
-            "primary_scale": -7.26,
-            "primary_speed": 0.24,
+            "primary_scale": 0.56,
+            "primary_speed": 0.05,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    v = plasma_sines(x, y, t, 1.0, 0.5, 0.5, 1.0)\n    return palette(wave_triangle(v)), hsv"
         },
         "1635426783275": {
@@ -685,7 +685,7 @@
         "1635439603304": {
             "name": "Dont stop me now",
             "primary_scale": 1.0,
-            "primary_speed": 0.25,
+            "primary_speed": 0.31,
             "source": "def pattern(t, dt, x, y, z, prev_state):\n    return palette_mirrored(wave_sine(t) + x), hsv"
         },
         "1635440199649": {
